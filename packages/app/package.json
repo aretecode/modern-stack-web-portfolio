@@ -19,17 +19,19 @@
     "build:dev": "react-scripts build",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
+  "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "3.4.1",
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.3",
-    "styled-components": "^4.2.0",
     "@types/styled-components": "4.1.12",
     "babel-plugin-styled-components": "1.10.0",
     "stylelint": "9.10.1",
     "stylelint-processor-styled-components": "1.6.0",
-    "@types/node": "^11.13.0",
     "@storybook/addon-storyshots": "^5.0.6",
     "@storybook/addon-knobs": "^5.0.6",
     "@storybook/react": "^5.0.6",
@@ -47,7 +49,6 @@
     "react-testing-library": "6.0.4",
     "react-test-renderer": "16.8.6",
     "@types/react-test-renderer": "16.8.1",
-    "typescript": "3.4.1",
     "ts-node": "8.0.3",
     "tslib": "1.9.3",
     "typescript-styled-plugin": "0.14.0",

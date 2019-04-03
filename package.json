@@ -4,6 +4,7 @@
   "private": false,
   "sideEffects": false,
   "devDependencies": {
+    "@types/node": "11.13.0",
     "prettier": "1.16.4",
     "tslint": "^5.15.0",
     "tslint-react": "4.0.0",
