@@ -4,6 +4,9 @@
   "private": false,
   "sideEffects": false,
   "scripts": {
+    "start": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
     "prepublishOnly": "rm -rf build && tsc || true",
     "dev:webpack": "webpack-dev",
     "dev:storybook": "start-storybook -p 9001 -c .storybook",
@@ -19,12 +22,20 @@
     "build:dev": "react-scripts build",
     "eject": "react-scripts eject"
   },
+  "resolutions": {
+    "webpack": "4.6.0"
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "express": "4.16.4"
   },
   "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/webpack-env": "^1.13.6",
+    "razzle": "^2.4.1",
+    "razzle-plugin-typescript": "^2.4.1",
     "typescript": "3.4.1",
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.3",

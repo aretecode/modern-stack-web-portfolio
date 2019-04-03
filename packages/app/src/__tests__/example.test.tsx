@@ -4,9 +4,7 @@ import App from '../App'
 
 describe('example', () => {
   it('simple react test', () => {
-    const handleSubmit = (serialized: {}) => {
-      // empty
-    }
+    const handleSubmit = (serialized: {}) => 'submitted'
     const mockSubmit = jest.fn(handleSubmit)
 
     const {getByText} = render(
