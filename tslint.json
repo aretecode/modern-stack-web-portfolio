@@ -1,0 +1,190 @@
+{
+  "extends": [
+    "tslint-react",
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "node_modules/tslint-microsoft-contrib",
+    "node_modules/tslint-clean-code/dist/src"
+  ],
+  "rules": {
+    "no-unused-expression": true,
+    "no-implicit-dependencies": false,
+    "deprecation": true,
+    "comment-type": [true, "doc", "singleline"],
+    "new-parens": true,
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+
+    "no-flag-args": true,
+    "no-commented-out-code": true,
+
+    "export-name": false,
+    "no-for-each-push": true,
+    "no-map-without-usage": true,
+    "no-var-keyword": true,
+    "no-let": true,
+    "no-loop-statement": true,
+    "no-unnecessary-callback-wrapper": true,
+    "ban-comma-operator": true,
+    "no-duplicate-switch-case": true,
+    "no-duplicate-super": true,
+    "no-return-await": true,
+    "prefer-conditional-expression": true,
+    "prefer-object-spread": true,
+    "arrow-return-shorthand": true,
+    "cyclomatic-complexity": [true, 15],
+    "class-name": true,
+    "function-name": [
+      true,
+      {
+        "method-regex": "^[a-z][\\w\\d]+$",
+        "private-method-regex": "^[a-z][\\w\\d]+$",
+        "protected-method-regex": "^[a-z][\\w\\d]+$",
+        "static-method-regex": "^[a-z][\\w\\d]+$",
+        "function-regex": "^[a-z][\\w\\d]+$"
+      }
+    ],
+    "ban": [
+      {
+        "name": "$",
+        "message": "please don't"
+      },
+      {
+        "name": ["*", "indexOf"],
+        "message": ".includes?"
+      },
+      {
+        "name": ["*", "reduce"],
+        "message": "Do you really need a reduce?"
+      }
+    ],
+    "jsdoc-format": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-boolean-value": false,
+    "label-position": true,
+    "no-any": false,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-this-assignment": true,
+    "no-sparse-arrays": true,
+    "no-null-keyword": true,
+    "no-construct": true,
+    "no-debugger": true,
+    "no-empty": true,
+    "no-eval": true,
+    "no-shadowed-variable": true,
+    "no-string-literal": true,
+    "no-switch-case-fall-through": true,
+    "no-use-before-declare": true,
+    "one-line": [
+      true,
+      "check-catch",
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "semicolon": [true, "never"],
+    "switch-default": true,
+    "typedef": [
+      true,
+      "parameter",
+      "property-declaration"
+    ],
+
+    "adjacent-overload-signatures": false,
+
+    "import-sources-order": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "interface-name": false,
+    "member-ordering": false,
+
+
+    "object-literal-shorthand": true,
+    "align": [
+      true,
+      "parameters",
+      "arguments",
+      "statements"
+    ],
+    "prefer-const": [
+      true,
+      {
+        "destructuring": "all"
+      }
+    ],
+    "forin": true,
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+    "eofline": true,
+    "indent": [ true, "spaces", 2],
+    "space-within-parens": false,
+    "space-before-function-paren": false,
+    "one-variable-on": true,
+    "no-parameter-reassignment": true,
+    "no-coines": true,
+    "no-duplicate-variable": true,
+    "no-trailing-whitespace": true,
+    "quotemark": [true, "single", "jsx-double"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "never",
+          "typeLiterals": "ignore"
+        },
+        "esSpecCompliant": true
+      }
+    ],
+    "triple-equals": [ true ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      ".tmp/**/*",
+      "build/**/*",
+      "dist/**/*",
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  }
+}
