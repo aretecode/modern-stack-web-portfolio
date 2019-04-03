@@ -1,0 +1,2 @@
+- https://jsonplaceholder.typicode.com/
+- https://www.themealdb.com/api.php
