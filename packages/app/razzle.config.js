@@ -9,19 +9,19 @@ module.exports = {
         useEslint: false, // ignored if `useBabel` is false
         tsLoader: {
           transpileOnly: true,
-          experimentalWatchApi: true
+          experimentalWatchApi: true,
         },
         forkTsChecker: {
           tsconfig: './tsconfig.json',
-          tslint: './tslint.json',
+          tslint: require.resolve('../../tslint.json'),
           watch: './src',
-          typeCheck: true
-        }
-      }
-    }
+          typeCheck: true,
+        },
+      },
+    },
   ],
-  modify: (config, { target, dev}, webpack) => {
+  modify: (config, {target, dev}, webpack) => {
     // config.plugins.push(new InterpolateHtmlPlugin(env.raw))
     return config
-  }
+  },
 }
