@@ -1,7 +1,10 @@
-import React, { StrictMode } from 'react'
-import { configure, setAddon, addDecorator } from '@storybook/react'
-import { toStyledStory } from './StyledStory'
-import './addons'
+/**
+ * @see https://storybook.js.org/basics/guide-react/
+ */
+import React, {StrictMode} from 'react'
+import {configure, setAddon, addDecorator} from '@storybook/react'
+import '@storybook/addon-knobs/register'
+import {toStyledStory} from './StyledStory'
 
 addDecorator(toStyledStory)
 
