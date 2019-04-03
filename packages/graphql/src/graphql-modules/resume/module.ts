@@ -1,4 +1,4 @@
-import { mergeGraphQLSchemas } from '@graphql-modules/utils'
+import { mergeGraphQLSchemas } from 'graphql-toolkit'
 import { GraphQLModule } from '@graphql-modules/core'
 import Schema from './schema'
 import resolver from './resolver'

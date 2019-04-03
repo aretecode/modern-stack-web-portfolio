@@ -9,12 +9,12 @@ import { Injectable } from '@graphql-modules/di'
 export class ResumeAPI extends RESTDataSource {
   baseURL = 'http://localhost:5555/todos'
 
-  async createResume(id) {
+  async createResume(id: string) {
     return this.get(`/${id}`)
   }
 
   async updateResume(args: {[key: string]: unknown}) {
-    return this.patch(id, {
+    return this.patch(args.id, {
       ...args,
     })
   }
@@ -33,14 +33,6 @@ export class ResumeAPI extends RESTDataSource {
   }
 
   async getResumes() {
-    return this.get()
-  }
-
-  async getMostViewedMovies(limit = 10) {
-    const data = await this.get('movies', {
-      per_page: limit,
-      order_by: 'most_viewed',
-    })
-    return data.results
+    return this.get('/')
   }
 }

@@ -78,5 +78,23 @@ function createApp() {
   return app
 }
 
-export { schema, createApp }
+function startExpress() {
+  logger.info('[graphql] creating...')
+  const app = createApp()
+
+  const port = process.env.API_PORT || '4000'
+
+  const host = process.env.NODE_ENV === 'development' ? 'localhost' : '0.0.0.0'
+
+  const listener = app.listen(+port, host, () => {
+    logger.info('[graphql] listening on: ', {[host]: port})
+  })
+
+  process.on('SIGTERM', () => {
+    logger.warn('[graphql] SIGTERM')
+    listener.close()
+  })
+}
+
+export { schema, createApp, startExpress }
 export default createApp
