@@ -20,6 +20,15 @@ module.exports = {
       },
     },
   ],
+  /**
+   * @todo add DefinePlugin
+   * @example
+   *   {
+   *     DISABLE_CACHE: false,
+   *     DISABLE_SSR: false,
+   *     LOCAL_PRODUCTION: undefined,
+   *   }
+   */
   modify: (config, {target, dev}, webpack) => {
     // config.plugins.push(new InterpolateHtmlPlugin(env.raw))
     return config
