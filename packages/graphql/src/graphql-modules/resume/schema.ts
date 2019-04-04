@@ -4,7 +4,7 @@ import { gql } from 'apollo-server'
  * @todo simpler resume schema?
  */
 export default gql`
-  type Profile {
+ type Profile {
     network: string
     username: string
     url: string
@@ -14,19 +14,15 @@ export default gql`
     label: string
     picture: string
     email: string
-    # phone
     telephone: string
     website: string
     summary: string
-
-    profiles: Profile[]
-
-    # location: BasicLocation
     address: string
     postalCode: string
     city: string
     countryCode: string
     region: string
+    profiles: [Profile]
   }
   type Work {
     company: string
@@ -35,12 +31,12 @@ export default gql`
     startDate: string
     endDate: string
     summary: string
-    highlights: string[]
+    highlights: [string]
   }
   type Resume {
-    id: ID!
+    id: ID
     basics: Basics
-    work: Work[]
+    work: [Work]
   }
 
   input ResumeInput {
