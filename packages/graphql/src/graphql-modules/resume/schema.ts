@@ -2,9 +2,10 @@ import { gql } from 'apollo-server'
 
 /**
  * @todo simpler resume schema?
+ * @see https://jsonresume.org/
  */
 export default gql`
- type Profile {
+  type Profile {
     network: string
     username: string
     url: string
