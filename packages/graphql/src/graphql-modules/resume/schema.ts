@@ -1,21 +1,57 @@
 import { gql } from 'apollo-server'
 
+/**
+ * @todo simpler resume schema?
+ */
 export default gql`
+  type Profile {
+    network: string
+    username: string
+    url: string
+  }
+  type Basics {
+    name: string
+    label: string
+    picture: string
+    email: string
+    # phone
+    telephone: string
+    website: string
+    summary: string
+
+    profiles: Profile[]
+
+    # location: BasicLocation
+    address: string
+    postalCode: string
+    city: string
+    countryCode: string
+    region: string
+  }
+  type Work {
+    company: string
+    position: string
+    website: string
+    startDate: string
+    endDate: string
+    summary: string
+    highlights: string[]
+  }
   type Resume {
     id: ID!
-    userId: Int
-    title: String
-    completed: Boolean
+    basics: Basics
+    work: Work[]
   }
 
   input ResumeInput {
-    title: String
-    completed: Boolean = false
+    id: ID
+    basics: Basics
+    work: Work[]
   }
 
   type Query {
-    todo(id: ID!): Resume
-    todos: [Resume]
+    resume(id: ID!): Resume
+    resumes: [Resume]
   }
   type Mutation {
     createResume(userId: Int!, input: ResumeInput!): Resume
