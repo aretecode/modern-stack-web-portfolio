@@ -1,12 +1,16 @@
 import * as React from 'react'
+import { Helmet } from 'react-helmet'
 
 class App extends React.PureComponent {
   public render() {
     return (
-      <React.StrictMode>
+      <>
+        <Helmet>
+          <title>app</title>
+        </Helmet>
         <h1>Started from the</h1>
         {this.props.children}
-      </React.StrictMode>
+      </>
     )
   }
 }
