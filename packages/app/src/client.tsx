@@ -1,17 +1,9 @@
 import * as React from 'react'
 import { hydrate } from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { ApolloProvider } from 'react-apollo'
-import { client } from './apolloClient'
 import App from './App'
 
-hydrate(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ApolloProvider client={client}>
-        <App />
-      </ApolloProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root') as HTMLElement
-)
+/**
+ * @todo this file is only for browser, but we need provider on server as well
+ * ^ so it is wrapping 2x
+ */
+hydrate(<App />, document.getElementById('root') as HTMLElement)
