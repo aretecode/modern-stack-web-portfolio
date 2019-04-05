@@ -4,7 +4,9 @@ import { gql } from 'apollo-boost'
 import { withClientState } from 'apollo-link-state'
 import { cache } from './apolloCache'
 import { logger } from './log'
-import { Resolvers } from './typings'
+import { Resolvers, ResumeType } from './typings'
+import { addTypeName } from './utils/addTypeName'
+import ResumeQuery from './queries/Resume.graphql'
 
 const typeDefs = gql`
   type Profile {
@@ -42,8 +44,16 @@ const typeDefs = gql`
     work: [Work]
   }
 
+  type AddOrUpdateResumeResponse {
+    responseMessage: string
+  }
+
   type Query {
     resume(id: ID): [Resume]
+  }
+  type Mutation {
+    setResume(basics: Basics, work: [Work]): AddOrUpdateResumeResponse!
+    addWork(id: ID, time: Work): AddOrUpdateResumeResponse!
   }
 `
 
@@ -93,57 +103,21 @@ const apolloState = {
       async resume(obj, args, context, info) {
         logger.info('[query] resume')
 
-        const data = context.cache.read({
-          query: gql`
-            query {
-              resume {
-                __typename
-                basics {
-                  __typename
-                  name
-                  label
-                  picture
-                  email
-                  telephone
-                  website
-                  summary
-                  address
-                  postalCode
-                  city
-                  countryCode
-                  region
-                  profiles {
-                    __typename
-                    network
-                    username
-                    url
-                  }
-                }
-                work {
-                  __typename
-                  company
-                  position
-                  website
-                  startDate
-                  endDate
-                  summary
-                  highlights
-                }
-              }
-            }
-          `,
+        const data = context.cache.read<{resume: ResumeType}>({
+          query: ResumeQuery,
           optimistic: true,
         })
 
         logger.log({data})
 
-        return {
-          __typename: 'Resume',
-          basics: {
-            __typename: 'Basics',
-            name: 'eh',
-          },
-        }
+        return {...data!.resume}
+        // return {
+        //   __typename: 'Resume',
+        //   basics: {
+        //     __typename: 'Basics',
+        //     name: 'eh',
+        //   },
+        // }
       },
     },
     Mutation: {
@@ -160,15 +134,9 @@ const apolloState = {
           basics: {
             __typename: 'Basics',
             ...args.basic,
-            profiles: args.profiles.map(profile => ({
-              __typename: 'Profile',
-              ...profile,
-            })),
+            profiles: addTypeName('Profile', args.profiles),
           },
-          work: args.profiles.map(profile => ({
-            __typename: 'Work',
-            ...profile,
-          })),
+          work: addTypeName('Work', args.profiles),
         }
 
         context.cache.writeData({
