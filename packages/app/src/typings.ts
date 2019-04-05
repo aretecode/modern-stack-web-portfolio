@@ -83,3 +83,42 @@ export interface Resolvers<
   Mutation?: {[key: string]: Resolver<ArgsType, ContextType, ResponseType>}
   Query?: {[key: string]: Resolver<ArgsType, ContextType, ResponseType>}
 }
+
+/**
+ * === data ===
+ */
+
+export interface ProfileType {
+  network: string
+  username: string
+  url: string
+}
+export interface BasicsType {
+  name: string
+  label: string
+  picture: string
+  email: string
+  telephone: string
+  website: string
+  summary: string
+  address: string
+  postalCode: string
+  city: string
+  countryCode: string
+  region: string
+  profiles: [ProfileType]
+}
+export interface WorkType {
+  company: string
+  position: string
+  website: string
+  startDate: string
+  endDate: string
+  summary: string
+  highlights: [string]
+}
+export interface ResumeType {
+  id: string
+  basics: BasicsType
+  work: [WorkType]
+}
