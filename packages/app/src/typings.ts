@@ -80,9 +80,42 @@ export interface Resolvers<
   ContextType extends object = {},
   ResponseType extends object = AnyObj
 > {
-  Mutation?: {[key: string]: Resolver<ArgsType, ContextType, ResponseType>}
-  Query?: {[key: string]: Resolver<ArgsType, ContextType, ResponseType>}
+  Mutation?: { [key: string]: Resolver<ArgsType, ContextType, ResponseType> }
+  Query?: { [key: string]: Resolver<ArgsType, ContextType, ResponseType> }
 }
+
+/**
+ * === graphql react ===
+ */
+import { QueryResult, OperationVariables } from 'react-apollo'
+
+export interface GraphqlPropsLoading<ResponseDataType = any> {
+  loading: true
+  data?: undefined
+}
+
+export interface GraphqlPropsLoaded<ResponseDataType> {
+  loading: false | boolean
+  data: ResponseDataType
+}
+
+export type GraphqlPropsLoadingOrLoaded<ResponseDataType> =
+  | GraphqlPropsLoaded<ResponseDataType>
+  | GraphqlPropsLoading<ResponseDataType>
+
+export type PartialReadonly<Type> = Partial<Readonly<Type>>
+
+export type GraphqlProps<
+  ResponseDataType extends object = AnyObj,
+  VariablesType extends OperationVariables = OperationVariables
+> = {
+  /**
+   * @see https://github.com/Microsoft/TypeScript/issues/24413
+   * @description not sure how this override will affect the condition ^
+   */
+  loading: boolean
+  error?: Error
+} & Readonly<QueryResult<ResponseDataType, VariablesType>>
 
 /**
  * === data ===
