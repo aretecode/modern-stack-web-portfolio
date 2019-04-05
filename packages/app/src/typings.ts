@@ -1,7 +1,14 @@
 /**
  * === basics ===
  */
-export type Primitive = string | number | boolean | symbol | null | undefined | void
+export type Primitive =
+  | string
+  | number
+  | boolean
+  | symbol
+  | null
+  | undefined
+  | void
 
 export type SafePrimitive = string | number | boolean | symbol
 
@@ -19,7 +26,11 @@ export interface FrozenSerializedArray extends Readonly<Serialized[]> {
   readonly(x: number): Serialized
 }
 
-export type Serialized = SerializedObj | Primitive | FrozenSerializedObj | FrozenSerializedArray
+export type Serialized =
+  | SerializedObj
+  | Primitive
+  | FrozenSerializedObj
+  | FrozenSerializedArray
 
 export type Real = AnyArrayOrObj | SafePrimitive
 
@@ -42,7 +53,12 @@ export type AnyFunction = (...args: any[]) => any
  * === empty ===
  */
 
-export type Empty = {[key: string]: never} | EmptyArray | '' | EmptySet | EmptyMap
+export type Empty =
+  | { [key: string]: never }
+  | EmptyArray
+  | ''
+  | EmptySet
+  | EmptyMap
 export interface EmptyMap<Key = string, Value = any> extends Map<Key, Value> {
   size: 0
 }
