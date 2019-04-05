@@ -171,3 +171,6 @@ export interface ResumeType {
   basics: BasicsType
   work: [WorkType]
 }
+export interface ResumeResponse {
+  resume: ResumeType
+}
