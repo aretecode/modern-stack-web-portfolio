@@ -1,4 +1,4 @@
-const {resolve} = require('path')
+const { resolve } = require('path')
 
 module.exports = baseConfig => {
   const config = baseConfig.config
@@ -6,7 +6,9 @@ module.exports = baseConfig => {
   config.module.rules = config.module.rules.filter(loader => {
     if (
       Array.isArray(loader.include) &&
-      loader.include.some(x => typeof x === 'string' && x.includes('.storybook'))
+      loader.include.some(
+        x => typeof x === 'string' && x.includes('.storybook')
+      )
     ) {
       return false
     } else if (Array.isArray(loader.use) === false || loader.use.length === 0) {
@@ -31,6 +33,9 @@ module.exports = baseConfig => {
     }
   })
 
+  /**
+   * @see https://www.styled-components.com/docs/tooling#babel-plugin
+   */
   config.module.rules.unshift({
     test: /\.(tsx?)$/,
     exclude: /node_modules/,
@@ -45,6 +50,7 @@ module.exports = baseConfig => {
               'babel-plugin-styled-components',
               {
                 ssr: true,
+                pure: true,
                 displayName: true,
                 minify: true,
               },
@@ -69,7 +75,7 @@ module.exports = baseConfig => {
   const plugin = new ForkTsCheckerWebpackPlugin({
     // async: false,
     tsconfig: require.resolve('../tsconfig.json'),
-    tslint: require.resolve('../tslint.json'),
+    tslint: require.resolve('../../../tslint.json'),
     measureCompilationTime: true,
     useTypescriptIncrementalApi: true,
     checkSyntacticErrors: true,
@@ -77,7 +83,6 @@ module.exports = baseConfig => {
     // ignoreLintWarnings: true,
   })
   config.plugins.push(plugin)
-
   config.node = {
     dgram: 'empty',
     fs: 'empty',
