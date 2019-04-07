@@ -26,7 +26,7 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-
+    
     "plugins": [
       {
         "name": "typescript-styled-plugin",
@@ -35,7 +35,7 @@
           "css",
           "sty"
         ],
-        "validate": false,
+        "validate": true,
         "lint": {
           "vendorPrefix": "error",
           "zeroUnits": "ignore",
@@ -47,27 +47,13 @@
           "float": "error"
         }
       }
-    ],
-
-    "rootDirs": [
-      "./src",
-      "./stories"
-    ],
-    "paths": {
-      "src/*": [
-        "src/*"
-      ],
-    }
+    ]
   },
-  "include": [
-    "src/*.ts",
-    "src/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ],
   "exclude": [
+    "**/__assets/*",
     "node_modules",
     "build",
+    ".storybook",
     "scripts",
     "acceptance-tests",
     "webpack",
