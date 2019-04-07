@@ -143,12 +143,6 @@
       }
     ],
     "triple-equals": [ true ],
-    "variable-name": [
-      true,
-      "ban-keywords",
-      "check-format",
-      "allow-leading-underscore"
-    ],
     "typedef-whitespace": [
       true,
       {
