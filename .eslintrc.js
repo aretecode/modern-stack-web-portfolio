@@ -2,9 +2,9 @@ module.exports = {
   plugins: [
     'import',
     'html',
-    'xod-fp',
-    'destructuring',
-    'better',
+    // 'xod-fp',
+    // 'destructuring',
+    // 'better',
     'i18n',
     'jsx-a11y',
     'prettier',
@@ -130,7 +130,7 @@ module.exports = {
     ],
     'valid-typeof': 2,
     'handle-callback-err': 2,
-    'better/no-nulls': 2,
+    // 'better/no-nulls': 2,
     'max-depth': ['warn', 2],
     'max-statements-per-line': [
       'error',
@@ -139,12 +139,12 @@ module.exports = {
       },
     ],
     'max-statements': ['error', 10],
-    'destructuring/in-params': [
-      'error',
-      {
-        'max-params': 0,
-      },
-    ],
+    // 'destructuring/in-params': [
+    //   'error',
+    //   {
+    //     'max-params': 0,
+    //   },
+    // ],
     'function-paren-newline': 0,
     'brace-style': [
       'error',
@@ -175,7 +175,7 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'no-return-assign': ['error', 'always'],
     'func-names': 'OFF',
-    'template-tag-spacing': ['error', 'always'],
+    'template-tag-spacing': ['error', 'never'],
     'func-call-spacing': 2,
     'no-param-reassign': 1,
     'prefer-rest-params': 1,
@@ -450,6 +450,5 @@ module.exports = {
     es6: true,
     node: true,
     browser: true,
-    jest: true,
   },
 }
