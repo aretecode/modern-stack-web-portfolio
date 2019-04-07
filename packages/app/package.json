@@ -25,7 +25,8 @@
   "resolutions": {
     "webpack": "4.29.6",
     "fork-ts-checker-webpack-plugin": "1.0.1",
-    "apollo-link": "1.2.11"
+    "apollo-link": "1.2.11",
+    "typescript": "3.4.2"
   },
   "dependencies": {
     "react": "^16.8.6",
@@ -44,6 +45,7 @@
     "pino": "5.12.0"
   },
   "devDependencies": {
+    "schema-dts": "0.3.1",
     "@types/react-helmet": "5.0.8",
     "pino-pretty": "2.6.0",
     "@types/pino": "5.8.6",
@@ -56,7 +58,7 @@
     "@types/webpack-env": "^1.13.6",
     "razzle": "^2.4.1",
     "razzle-plugin-typescript": "^2.4.1",
-    "typescript": "3.4.1",
+    "typescript": "3.4.2",
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.3",
     "@types/styled-components": "4.1.12",
@@ -86,6 +88,7 @@
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "webpack": "^5.0.0-alpha.9",
     "ts-loader": "5.3.3",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "date-fns": "1.30.1"
   }
 }
