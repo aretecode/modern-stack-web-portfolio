@@ -5,21 +5,20 @@ import * as React from 'react'
 import { BrowserRouter, StaticRouter } from 'react-router-dom'
 import { ApolloProvider } from 'react-apollo'
 import { client } from './apolloClient'
+import { ResumeProvider } from './features/ResumeContext'
 
-// tslint:disable:variable-name
-// @lint ^ need something along these lines to use router universally
-// + pass typings
-// + ComponentName is in StudlyCaps
 const Router = ((typeof window === 'object'
   ? BrowserRouter
   : StaticRouter) as any) as React.ComponentType
 
 export default class AppWrap extends React.PureComponent {
-  public render() {
+  render() {
     return (
       <React.StrictMode>
         <Router>
-          <ApolloProvider client={client}>{this.props.children}</ApolloProvider>
+          <ApolloProvider client={client}>
+            <ResumeProvider>{this.props.children}</ResumeProvider>
+          </ApolloProvider>
         </Router>
       </React.StrictMode>
     )
