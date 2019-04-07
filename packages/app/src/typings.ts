@@ -155,7 +155,7 @@ export interface BasicsType {
   city: string
   countryCode: string
   region: string
-  profiles: [ProfileType]
+  profiles: ProfileType[] | string[]
 }
 export interface WorkType {
   company: string
@@ -164,12 +164,13 @@ export interface WorkType {
   startDate: string
   endDate: string
   summary: string
-  highlights: [string]
+  highlights: string[]
+  picture: string
 }
 export interface ResumeType {
   id: string
   basics: BasicsType
-  work: [WorkType]
+  work: WorkType[]
 }
 export interface ResumeResponse {
   resume: ResumeType
