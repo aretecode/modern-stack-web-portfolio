@@ -2,8 +2,11 @@
  * @file @todo move out the `⇔` @@hack
  */
 import * as React from 'react'
-import { ResumeContext, ResumeContextType } from '../../features/ResumeContext'
-import { SocialProfiles } from '../../features/SocialProfiles'
+import {
+  ResumeContext,
+  ResumeContextType,
+} from '../../src/features/ResumeContext'
+import { SocialProfiles } from '../../src/features/SocialProfiles'
 import { Address } from './Address'
 import {
   StyledButtonWrap,

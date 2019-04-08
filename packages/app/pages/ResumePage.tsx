@@ -5,12 +5,12 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import { ResumeContext, ResumeContextType } from '../features/ResumeContext'
-import { StyledCard } from '../features/Card'
-import { StyledMain } from '../features/Main'
-import { StyledSeparator } from '../features/Separator'
-import { StyledLink } from '../features/Link'
-import { WorkType } from '../typings'
+import { ResumeContext, ResumeContextType } from '../src/features/ResumeContext'
+import { StyledCard } from '../src/features/Card'
+import { StyledMain } from '../src/features/Main'
+import { StyledSeparator } from '../src/features/Separator'
+import { StyledLink } from '../src/features/Link'
+import { WorkType } from '../src/typings'
 
 export const StyledGrid = styled.div`
   display: grid;

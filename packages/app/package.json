@@ -4,9 +4,10 @@
   "private": false,
   "sideEffects": false,
   "scripts": {
-    "start": "razzle start",
-    "build": "razzle build",
-    "test": "razzle test --env=jsdom",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
     "prepublishOnly": "rm -rf build && tsc || true",
     "dev:webpack": "webpack-dev",
     "dev:storybook": "start-storybook -p 9001 -c .storybook",
@@ -29,6 +30,8 @@
     "typescript": "3.4.2"
   },
   "dependencies": {
+    "next": "8.0.4",
+    "react-amphtml": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0",
@@ -61,8 +64,7 @@
     "@types/react-router-dom": "4.3.1",
     "@types/express": "^4.11.1",
     "@types/webpack-env": "^1.13.6",
-    "razzle": "^2.4.1",
-    "razzle-plugin-typescript": "^2.4.1",
+    "@zeit/next-typescript": "^1.1.1",
     "typescript": "3.4.2",
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.3",
