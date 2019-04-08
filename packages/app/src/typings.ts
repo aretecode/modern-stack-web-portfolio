@@ -50,6 +50,33 @@ export type AnyArrayOrObj = (AnyObj & AnyArray) | AnyObj | AnyArray
 export type AnyFunction = (...args: any[]) => any
 
 /**
+ * === helpers ===
+ */
+
+/**
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
+ * @see https://bitbucket.org/skava-admin/documentation/wiki/Training/Technical%20Questions%20and%20Answers
+ */
+export type RecursiveRequired<Type> = {
+  [Key in keyof Type]-?: RecursiveRequired<Type[Key]>
+}
+
+/**
+ * @description to add __typename
+ * @todo this does not work if it is using a type union
+ *    @example `Eh[] | string[]`
+ */
+export type WithTypeNameRecursive<Type extends {}> = {
+  [Key in keyof Type]: Type[Key] extends Primitive | Primitive[]
+    ? Type[Key]
+    : Type[Key] extends any[]
+    ? WithTypeNameRecursive<Type[Key]>
+    : Type[Key] extends {}
+    ? Type[Key] & { __typename: string }
+    : Type[Key]
+} & { __typename?: string }
+
+/**
  * === empty ===
  */
 
@@ -164,11 +191,12 @@ export interface WorkType {
   startDate: string
   endDate: string
   summary: string
-  highlights: string[]
+  highlights: string[] | string
   picture: string
 }
 export interface ResumeType {
-  id: string
+  /** currently optional */
+  id?: string
   basics: BasicsType
   work: WorkType[]
 }
