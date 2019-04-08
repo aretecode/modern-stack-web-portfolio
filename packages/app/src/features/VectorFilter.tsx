@@ -30,7 +30,7 @@ export const VectorFilter = (
 /**
  * @description this takes it out of the flow
  */
-const StyledVectorFilter = styled(VectorFilter)`
+export const StyledVectorFilter = styled(VectorFilter)`
   height: 0;
   width: 0;
   visibility: hidden;
