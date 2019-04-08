@@ -21,11 +21,11 @@ const setupJestConfig = (dirName = '<rootDir>') => {
       dirName + '/__tests__/deps/*.(j|t)s?(x)',
       dirName + '/__tests__/fixtures/*.(j|t)s?(x)',
     ],
-    testEnvironment: 'node',
+    testEnvironment: 'jsdom',
     transform: {
       ...tsjPreset.transform,
     },
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */ ),
+    // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths /*, { prefix: '<rootDir>/' } */ ),
     moduleFileExtensions: [
       'web.ts',
       'ts',

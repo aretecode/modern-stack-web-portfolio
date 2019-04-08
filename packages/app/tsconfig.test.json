@@ -9,6 +9,8 @@
     "module": "commonjs",
     "inlineSourceMap": true,
 
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,
 

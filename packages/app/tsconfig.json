@@ -50,6 +50,7 @@
     ]
   },
   "exclude": [
+    "**/.next",
     "**/__assets/*",
     "node_modules",
     "build",

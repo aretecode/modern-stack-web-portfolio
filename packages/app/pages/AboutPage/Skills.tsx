@@ -1,5 +1,8 @@
 import * as React from 'react'
-import { ResumeContext, ResumeContextType } from '../../features/ResumeContext'
+import {
+  ResumeContext,
+  ResumeContextType,
+} from '../../src/features/ResumeContext'
 
 export default class Skills extends React.PureComponent {
   static contextType = ResumeContext

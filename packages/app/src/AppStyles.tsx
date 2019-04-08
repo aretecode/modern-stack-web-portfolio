@@ -68,7 +68,7 @@ export const AppStyles = createGlobalStyle`
     font-weight: 400;
     line-height: 1.5;
   }
-  #root {
+  #__next {
     min-height: inherit;
     background-color: var(--color-dark-background-dark);
   }

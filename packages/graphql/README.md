@@ -1,2 +1,2 @@
-- https://jsonplaceholder.typicode.com/
-- https://www.themealdb.com/api.php
+- [json placeholder api](https://jsonplaceholder.typicode.com/)
+- [now.js with apollo](https://github.com/zeit/now-examples/blob/master/apollo/now.json)

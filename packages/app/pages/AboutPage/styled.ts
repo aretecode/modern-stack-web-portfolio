@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { StyledSeparator as Separator } from '../../features/Separator'
-import { StyledLink as Link } from '../../features/Link'
+import { StyledSeparator as Separator } from '../../src/features/Separator'
+import { StyledLink as Link } from '../../src/features/Link'
 
 export const StyledLink = styled(Link)`
   &&& {
