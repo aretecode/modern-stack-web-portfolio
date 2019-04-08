@@ -55,7 +55,6 @@ export type AnyFunction = (...args: any[]) => any
 
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
- * @see https://bitbucket.org/skava-admin/documentation/wiki/Training/Technical%20Questions%20and%20Answers
  */
 export type RecursiveRequired<Type> = {
   [Key in keyof Type]-?: RecursiveRequired<Type[Key]>
