@@ -1,8 +1,8 @@
 import { gql } from 'apollo-boost'
 
 export default gql`
-  query {
-    resume {
+  query Resume {
+    resume @client {
       __typename
       basics {
         __typename
@@ -34,6 +34,7 @@ export default gql`
         endDate
         summary
         highlights
+        picture
       }
     }
   }
