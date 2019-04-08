@@ -1,7 +1,13 @@
+/**
+ * @file this is used for applying `filter: url(#id)`
+ */
 import * as React from 'react'
+import styled from 'styled-components'
 
-export const VectorFilter = () => (
-  <svg>
+export const VectorFilter = (
+  props: React.DetailedHTMLProps<React.SVGAttributes<SVGElement>, SVGElement>
+) => (
+  <svg {...props}>
     <filter
       id="green-tint"
       colorInterpolationFilters="sRGB"
@@ -20,3 +26,13 @@ export const VectorFilter = () => (
     </filter>
   </svg>
 )
+
+/**
+ * @description this takes it out of the flow
+ */
+const StyledVectorFilter = styled(VectorFilter)`
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+`
