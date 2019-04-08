@@ -182,7 +182,7 @@ export interface BasicsType {
   city: string
   countryCode: string
   region: string
-  profiles: ProfileType[] | string[]
+  profiles: ProfileType[]
 }
 export interface WorkType {
   company: string
