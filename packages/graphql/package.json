@@ -1,5 +1,5 @@
 {
-  "name": "skeletons-graphql",
+  "name": "modern-stack-skeleton-graphql",
   "version": "0.0.1",
   "dependencies": {
     "apollo-datasource-rest": "0.3.2",
