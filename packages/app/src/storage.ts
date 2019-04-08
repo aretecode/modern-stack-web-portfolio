@@ -14,10 +14,7 @@ import { ResumeType, WithTypeNameRecursive } from './typings'
 /**
  * @todo @@perf remove via env
  */
-const IS_REALM_WITHOUT_INDEX_DB =
-  typeof window !== 'object' &&
-  typeof global === 'object' &&
-  typeof indexedDB !== 'object'
+const IS_REALM_WITHOUT_INDEX_DB = typeof indexedDB !== 'object'
 
 /**
  * could also split into the `basics` & `workList`
