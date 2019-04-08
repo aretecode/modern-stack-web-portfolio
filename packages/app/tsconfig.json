@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es2018",
+    "lib": ["es2018", "es2017", "es2016", "es2015", "dom"],
+    "sourceMap": true,
+
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "declaration": true,
+
+    "jsx": "react",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": [
+          "styled",
+          "css",
+          "sty"
+        ],
+        "validate": true,
+        "lint": {
+          "vendorPrefix": "error",
+          "zeroUnits": "ignore",
+          "compatibleVendorPrefixes": "error",
+          "emptyRules": "warn",
+          "importStatement": "error",
+          "universalSelector": "warn",
+          "important": "error",
+          "float": "error"
+        }
+      }
+    ]
+  },
+  "exclude": [
+    "**/.next",
+    "**/__assets/*",
+    "node_modules",
+    "build",
+    ".storybook",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "public"
+  ]
+}
