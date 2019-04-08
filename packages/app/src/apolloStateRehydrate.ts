@@ -1,21 +1,9 @@
 /**
  * @file has side effects, can export and call in side effects setup file
  */
-import { gql } from 'apollo-boost'
 import { client } from './apolloClient'
 import { resumeKeyValStore } from './storage'
-
-/**
- * @todo move to queries
- */
-const SetResume = gql`
-  mutation SetResume($basics: Basics, $work: [Work]) {
-    setResume(basics: $basics, work: $work) @client {
-      __typename
-      responseMessage
-    }
-  }
-`
+import SetResume from './graphql/SetResume'
 
 function rehydrate() {
   return resumeKeyValStore.get('resume').then(async resume => {

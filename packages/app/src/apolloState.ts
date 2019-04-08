@@ -6,7 +6,7 @@ import { cache } from './apolloCache'
 import { logger } from './log'
 import { Resolvers, ResumeType } from './typings'
 import { addTypeName } from './utils/addTypeName'
-import ResumeQuery from './queries/Resume.graphql'
+import ResumeQuery from './graphql/Resume'
 
 export const typeDefs = gql`
   type Profile {
