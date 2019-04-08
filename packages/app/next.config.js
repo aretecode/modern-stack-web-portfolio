@@ -2,6 +2,8 @@ const withTypescript = require('@zeit/next-typescript')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 /**
+ * @see https://zeit.co/examples/nextjs/
+ *
  * @todo add DefinePlugin
  * @example
  *   {
@@ -11,4 +13,6 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
  *     REALM_TYPE: 'browser' | 'node'
  *   }
  */
-module.exports = withTypescript()
+module.exports = withTypescript({
+  target: 'serverless',
+})
