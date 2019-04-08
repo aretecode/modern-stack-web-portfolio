@@ -4,8 +4,15 @@
  * @see https://github.com/apollographql/apollo-link/issues/83
  * @see https://github.com/github/fetch#sending-cookies
  * @todo https://www.apollographql.com/docs/react/features/performance.html#cache-redirects
+ *
+ * @todo https://www.apollographql.com/docs/link/links/state < docs are not accurate for apollo-boost with state link
  */
-import { ApolloClient, HttpLink, ApolloLink, ApolloClientOptions } from 'apollo-boost'
+import {
+  ApolloClient,
+  HttpLink,
+  ApolloLink,
+  ApolloClientOptions,
+} from 'apollo-boost'
 import { onError } from 'apollo-link-error'
 import { GraphQLError } from 'graphql'
 import { isEmpty, isObj } from './utils/is'
@@ -19,14 +26,16 @@ const httpLink = new ApolloLink((operation, forward) => {
   const httpLinkActual = new HttpLink({
     get uri() {
       const extension =
-        process.env.NODE_ENV === 'development' ? `?n=${operation.operationName}` : ''
+        process.env.NODE_ENV === 'development'
+          ? `?n=${operation.operationName}`
+          : ''
       return `http://localhost:4000/graphql${extension}`
     },
 
     /**
      * @see https://github.com/apollographql/apollo-link/issues/236#issuecomment-348176745
      */
-    fetchOptions: {method: 'GET'},
+    fetchOptions: { method: 'GET' },
 
     credentials:
       process.env.NODE_ENV === 'development' || process.env.LOCAL_PRODUCTION
@@ -38,12 +47,14 @@ const httpLink = new ApolloLink((operation, forward) => {
 })
 
 const logError = (error: GraphQLError): void => {
-  const {message, locations, path} = error
-  logger.error(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`)
+  const { message, locations, path } = error
+  logger.error(
+    `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+  )
 }
 
 const errorLink = onError(namedErrorResponseParams => {
-  const {graphQLErrors, networkError, response} = namedErrorResponseParams
+  const { graphQLErrors, networkError, response } = namedErrorResponseParams
   const hasError = isObj(graphQLErrors) || !isEmpty(networkError)
 
   if (isObj(graphQLErrors)) {
@@ -87,6 +98,7 @@ const consoleLink = new ApolloLink((operation, forward) => {
  */
 const clientConfig: ApolloClientOptions<any> = {
   link: ApolloLink.from([consoleLink, errorLink, stateLink, httpLink]),
+
   cache,
   ssrMode: true,
   connectToDevTools: undefined,
