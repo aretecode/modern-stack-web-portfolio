@@ -27,9 +27,10 @@ module.exports = {
    *     DISABLE_CACHE: false,
    *     DISABLE_SSR: false,
    *     LOCAL_PRODUCTION: undefined,
+   *     REALM_TYPE: 'browser' | 'node'
    *   }
    */
-  modify: (config, {target, dev}, webpack) => {
+  modify: (config, { target, dev }, webpack) => {
     // config.plugins.push(new InterpolateHtmlPlugin(env.raw))
     return config
   },
