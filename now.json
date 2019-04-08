@@ -3,7 +3,7 @@
   "name": "nextjs",
   "builds": [
     {
-      "src": "./packages/app/package.json",
+      "src": "packages/app/package.json",
       "use": "@now/next"
     }
   ]
