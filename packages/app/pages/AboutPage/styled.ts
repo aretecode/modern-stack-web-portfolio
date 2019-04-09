@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { StyledSeparator as Separator } from '../../src/features/Separator'
 import { StyledLink as Link } from '../../src/features/Link'
+import { StyledImage } from '../../src/features/Image'
 
 export const StyledLink = styled(Link)`
   &&& {
@@ -35,7 +36,7 @@ export const StyledArrow = styled.i`
   opacity: 0.3;
 `
 
-export const StyledSummary = styled.summary`
+export const StyledSummary = styled.p`
   margin-top: 1rem;
 `
 
@@ -47,7 +48,7 @@ export const StyledLabel = styled.h4`
   font-size: 1.2rem;
 `
 
-export const StyledAboutMeImg = styled.img`
+export const StyledAboutMeImg = styled(StyledImage)`
   display: flex;
   flex-basis: 30%;
   border-radius: 0.125rem;
