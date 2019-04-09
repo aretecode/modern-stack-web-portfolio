@@ -10,6 +10,7 @@ import { StyledCard } from '../src/features/Card'
 import { StyledMain } from '../src/features/Main'
 import { StyledSeparator } from '../src/features/Separator'
 import { StyledLink } from '../src/features/Link'
+import { StyledImage } from '../src/features/Image'
 import { WorkType } from '../src/typings'
 
 export const StyledGrid = styled.div`
@@ -27,7 +28,7 @@ const StyledTime = styled.time`
  * @see https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
  * @see https://addyosmani.com/blog/lazy-loading/
  */
-const StyledCardImage = styled.img.attrs({
+const StyledCardImage = styled(StyledImage).attrs({
   loading: 'lazy',
 })`
   max-width: 100%;
@@ -93,7 +94,7 @@ function renderWork(work: WorkType) {
             <strong>{work.position}</strong>
             <p>{work.highlights}</p>
             <p>{work.summary}</p>
-            <StyledLink href={work.website}>{work.website}</StyledLink>
+            <StyledLink to={work.website}>{work.website}</StyledLink>
           </section>
           <section>
             <TimeRange startDate={work.startDate} endDate={work.endDate} />

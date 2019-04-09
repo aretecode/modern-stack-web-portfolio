@@ -1,10 +1,20 @@
-/**
- * @todo @@amp this will be in Amp
- */
-import { Link as ReactRouterLink } from 'react-router-dom'
+import { Link as BaseLink, LinkProps } from 'react-router-dom'
+// import BaseLink from 'next/link'
 import styled from 'styled-components'
 
-export const StyledLink = styled(ReactRouterLink)`
+export class DynamicLink extends React.PureComponent<LinkProps> {
+  render() {
+    const { to, href, theme, ...remainingProps } = this.props
+    const toHref = to || href || ''
+    if (toHref.includes('http')) {
+      return <a {...remainingProps} href={toHref} />
+    } else {
+      return <BaseLink {...remainingProps} to={toHref} />
+    }
+  }
+}
+
+export const StyledLink = styled(BaseLink)`
   text-decoration: none;
   position: relative;
   display: inline-flex;

@@ -54,13 +54,11 @@ export default class AboutPage extends React.PureComponent {
               <nav>
                 <section>
                   <header>Phone</header>
-                  <StyledLink href={`tel:${telephone}`}>
-                    +{telephone}
-                  </StyledLink>
+                  <StyledLink to={`tel:${telephone}`}>+{telephone}</StyledLink>
                 </section>
                 <section>
                   <header>Email</header>
-                  <StyledLink href={`mailto:${email}`}>{email}</StyledLink>
+                  <StyledLink to={`mailto:${email}`}>{email}</StyledLink>
                 </section>
               </nav>
               <StyledButtonWrap>
