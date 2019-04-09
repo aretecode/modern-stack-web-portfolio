@@ -125,6 +125,7 @@ export default class MyDocument extends Document {
 
       return {
         isAmp,
+        url,
         ...initialProps,
         styles: (
           <>
