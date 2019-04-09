@@ -5,12 +5,15 @@ import { gql } from 'apollo-server'
  * @see https://jsonresume.org/
  */
 export default gql`
-  type Profile {
+  scalar string
+
+  # response
+  type ProfileType {
     network: string
     username: string
     url: string
   }
-  type Basics {
+  type BasicsType {
     name: string
     label: string
     picture: string
@@ -23,37 +26,74 @@ export default gql`
     city: string
     countryCode: string
     region: string
-    profiles: [Profile]
+    profiles: [ProfileType]
   }
-  type Work {
+  type WorkType {
     company: string
     position: string
-    website: string
     startDate: string
     endDate: string
     summary: string
     highlights: [string]
+    website: string
+    picture: string
   }
-  type Resume {
+  type ResumeType {
     id: ID
-    basics: Basics
-    work: [Work]
+    basics: BasicsType
+    work: [WorkType]
   }
 
-  input ResumeInput {
+  # response
+  type AddOrUpdateResumeResponse {
+    responseMessage: string
+  }
+
+  # @todo extends type?
+  input ProfileInputType {
+    network: string
+    username: string
+    url: string
+  }
+  input BasicsInputType {
+    name: string
+    label: string
+    picture: string
+    email: string
+    telephone: string
+    website: string
+    summary: string
+    address: string
+    postalCode: string
+    city: string
+    countryCode: string
+    region: string
+    profiles: [ProfileInputType]
+  }
+  input WorkInputType {
+    company: string
+    position: string
+    startDate: string
+    endDate: string
+    summary: string
+    highlights: [string]
+    website: string
+    picture: string
+  }
+  input ResumeInputType {
     id: ID
-    basics: Basics
-    work: Work[]
+    basics: BasicsInputType
+    work: [WorkInputType]
   }
 
   type Query {
-    resume(id: ID!): Resume
-    resumes: [Resume]
+    resume(id: ID!): ResumeType
+    resumes: [ResumeType]
   }
   type Mutation {
-    createResume(userId: Int!, input: ResumeInput!): Resume
-    updateResume(id: ID!, input: ResumeInput!): Resume
-    toggleResume(id: ID!): Resume
+    createResume(userId: Int!, input: ResumeInputType!): ResumeType
+    updateResume(id: ID!, input: ResumeInputType!): ResumeType
+    toggleResume(id: ID!): ResumeType
     deleteResume(id: ID!): String
   }
 `
