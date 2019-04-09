@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "nextjs",
+  "name": "modern-stack-skeletons-app",
   "builds": [
     { 
       "src": "package.json",

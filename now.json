@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "name": "nextjs",
+  "name": "modern-stack-skeletons",
   "builds": [
     {
-      "src": "./packages/app/package.json",
+      "src": "packages/app/package.json",
       "use": "@now/next"
     }
   ]
