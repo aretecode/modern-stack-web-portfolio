@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
+    "install:workspace": "cd ../../ && yarn install && cd packages/app",
     "prepublishOnly": "rm -rf build && tsc || true",
     "dev:webpack": "webpack-dev",
     "dev:storybook": "start-storybook -p 9001 -c .storybook",
