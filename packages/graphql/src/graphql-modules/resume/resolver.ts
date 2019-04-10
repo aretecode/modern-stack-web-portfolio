@@ -5,7 +5,9 @@ export default {
   Query: {
     resume: async (obj, args, context, info) => {
       try {
-        await writeFileAsyncJson(dbAbsolutePath, args)
+        const response = await readFileAsyncJson(dbAbsolutePath)
+        logger.info('[resume] read file', response)
+        return response
       } catch (fileSystemError) {
         logger.error(fileSystemError)
         /**
@@ -20,8 +22,18 @@ export default {
    */
   Mutation: {
     setResume: async (obj, args, context, info) => {
-      const response = await readFileAsyncJson(dbAbsolutePath)
-      return response
+      try {
+        logger.info('[resume] writing file from args:', args)
+        await writeFileAsyncJson(dbAbsolutePath, args)
+        logger.info('[resume] wrote file')
+      } catch (fileSystemError) {
+        logger.error(fileSystemError)
+
+        /**
+         * @see @@security above
+         */
+        throw fileSystemError
+      }
     },
   },
 }

@@ -27,6 +27,9 @@ export default gql`
     countryCode: string
     region: string
     profiles: [ProfileType]
+
+    resumeWebsite: string
+    skills: [string]
   }
   type WorkType {
     company: string
@@ -69,6 +72,9 @@ export default gql`
     countryCode: string
     region: string
     profiles: [ProfileInputType]
+
+    resumeWebsite: string
+    skills: [string]
   }
   input WorkInputType {
     company: string
