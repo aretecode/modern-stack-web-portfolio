@@ -182,6 +182,9 @@ export interface BasicsType {
   countryCode: string
   region: string
   profiles: ProfileType[]
+
+  resumeWebsite: string
+  skills: string[]
 }
 export interface WorkType {
   company: string
