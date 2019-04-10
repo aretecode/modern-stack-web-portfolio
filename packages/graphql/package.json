@@ -11,6 +11,7 @@
     "start:mock": "npx json-server --watch src/data/db.json --port 5555"
   },
   "dependencies": {
+    "mkdirp": "0.5.1",
     "reflect-metadata": "0.1.13",
     "apollo-datasource-rest": "0.3.2",
     "apollo-datasource": "0.3.1",
@@ -32,6 +33,7 @@
     "express": "4.16.4"
   },
   "devDependencies": {
-    "@types/pino": "5.8.6"
+    "@types/pino": "5.8.6",
+    "@types/mkdirp": "0.5.2"
   }
 }
