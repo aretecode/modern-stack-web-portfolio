@@ -1,15 +1,34 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import { ResumeContext, ResumeContextType } from './ResumeContext'
 
 export default class ResumeHelmet extends React.PureComponent {
+  static contextType = ResumeContext
+  readonly context: ResumeContextType
+
   render() {
-    const description = ''
-    const image = ''
-    const title = ''
+    const { summary, picture, name, profiles } = this.context.basics
+    const description = summary
+    const image = picture
+    const title = name + ' Resume'
+
+    const foundTwitter = profiles.find(x => x.network === 'twitter')
+
+    if (process.env.NODE_ENV === 'development') {
+      if (foundTwitter === undefined) {
+        throw new Error('requires twitter for twitter cards')
+      }
+    }
+
+    const twitter = foundTwitter!.username
+
     // initialProps.url?
     const domain = ''
-    const twitter = '@name'
     const url = ''
+
+    /**
+     * amp?
+     */
     const labelValueList = [
       {
         label: '',
