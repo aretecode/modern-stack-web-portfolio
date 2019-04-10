@@ -87,13 +87,9 @@ export default gql`
   }
 
   type Query {
-    resume(id: ID!): ResumeType
-    resumes: [ResumeType]
+    resume(id: ID): ResumeType
   }
   type Mutation {
-    createResume(userId: Int!, input: ResumeInputType!): ResumeType
-    updateResume(id: ID!, input: ResumeInputType!): ResumeType
-    toggleResume(id: ID!): ResumeType
-    deleteResume(id: ID!): String
+    setResume(basics: BasicsType, work: [WorkType]): AddOrUpdateResumeResponse
   }
 `
