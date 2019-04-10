@@ -20,6 +20,9 @@ export const StyledGrid = styled.div`
   grid-auto-rows: auto;
 `
 
+/**
+ * could use https://amp.dev/documentation/examples/components/amp-timeago/
+ */
 const StyledTime = styled.time`
   display: inline-flex;
 `
