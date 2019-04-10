@@ -90,6 +90,9 @@ export default gql`
     resume(id: ID): ResumeType
   }
   type Mutation {
-    setResume(basics: BasicsType, work: [WorkType]): AddOrUpdateResumeResponse
+    setResume(
+      basics: BasicsInputType
+      work: [WorkInputType]
+    ): AddOrUpdateResumeResponse
   }
 `
