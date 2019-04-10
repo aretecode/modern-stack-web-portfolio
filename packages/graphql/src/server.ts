@@ -5,7 +5,7 @@ import { InMemoryLRUCache as KeyValueCache } from 'apollo-server-caching'
 import { logger, pinoExpressMiddleware } from './log'
 import { appModules } from './graphql-modules'
 
-const {schema} = appModules
+const { schema } = appModules
 
 /**
  * @see https://github.com/apollographql/apollo-server/blob/master/packages/apollo-server-core/src/runHttpQuery.ts#L343
@@ -29,29 +29,25 @@ function createServer() {
      * @see https://github.com/apollographql/apollo-server/blob/19478920e4a6bdbf57b10ddc782e685542fd9bd4/packages/apollo-server-core/src/formatters.ts#L14
      * @see https://www.apollographql.com/docs/apollo-server/features/errors.html
      */
-    formatError(error: Error) {
-      logger.error(error)
-      return error
-    },
     formatResponse(response: any = {}) {
       if (process.env.NODE_ENV === 'test') {
         return response
       }
 
-      const {data, ...otherResponseThings} = response
+      const { data, ...otherResponseThings } = response
 
       if (data === undefined) {
-        logger.error('[graphql]{response}: data was undefined')
+        logger.error('🚀  {response}: data was undefined')
         logger.error(otherResponseThings)
         return
       }
 
-      const {__schema, ...whatWeWantToLog} = data
+      const { __schema, ...whatWeWantToLog } = data
       const hasOtherThings = Object.keys(otherResponseThings).length > 0
 
-      logger.info('[graphql]{response}: ', whatWeWantToLog)
+      logger.info('🚀  {response}: ', whatWeWantToLog)
       if (hasOtherThings) {
-        logger.info('[graphql]{response}(...remaining): ', otherResponseThings)
+        logger.info('🚀  {response}(...remaining): ', otherResponseThings)
       }
 
       return response
@@ -74,24 +70,24 @@ function createApp() {
 
   app.use(pinoExpressMiddleware)
 
-  server.applyMiddleware({app, cors: corsOptions})
+  server.applyMiddleware({ app, cors: corsOptions })
   return app
 }
 
 function startExpress() {
-  logger.info('[graphql] creating...')
+  logger.info('🚀  creating...')
   const app = createApp()
 
-  const port = process.env.API_PORT || '4000'
+  const port = +(process.env.API_PORT || '4000')
 
   const host = process.env.NODE_ENV === 'development' ? 'localhost' : '0.0.0.0'
 
-  const listener = app.listen(+port, host, () => {
-    logger.info('[graphql] listening on: ', {[host]: port})
+  const listener = app.listen(port, host, () => {
+    logger.info('🚀  listening on: ', { [host]: port })
   })
 
   process.on('SIGTERM', () => {
-    logger.warn('[graphql] SIGTERM')
+    logger.warn('🚀  SIGTERM')
     listener.close()
   })
 }

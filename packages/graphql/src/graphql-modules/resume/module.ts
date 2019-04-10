@@ -8,7 +8,11 @@ export const resumeModule = new GraphQLModule<{}, {}, {}>({
   name: 'Resume',
   typeDefs: mergeTypeDefs([Schema]),
   resolvers: resolver,
-  dataSources: () => ({
-    resume: new ResumeAPI(),
-  }),
+  /**
+   * @todo connect properly
+   * @see https://medium.com/the-guild/graphql-modules-feature-based-graphql-modules-at-scale-2d7b2b0da6da
+   */
+  // dataSources: () => ({
+  //   resume: new ResumeAPI(),
+  // }),
 })
