@@ -1,4 +1,4 @@
-import * as mkdirp from 'mkdirp'
+import mkdirp from 'mkdirp'
 import { resolve } from 'path'
 import { writeFile, readFile, exists } from 'fs'
 import { promisify } from 'util'
