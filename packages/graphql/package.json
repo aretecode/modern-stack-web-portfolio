@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "now-build": "tsc",
+    "now-build": "tsc || true",
     "install:workspace": "cd ../../ && yarn install && cd packages/graphql",
     "build": "tsc --outDir dist || true",
     "start": "node dist/index.js",
