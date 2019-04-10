@@ -1,6 +1,7 @@
 {
   "name": "modern-stack-skeleton-graphql",
   "version": "0.0.1",
+  "main": "dist/index.js",
   "scripts": {
     "now-build": "tsc",
     "install:workspace": "cd ../../ && yarn install && cd packages/graphql",
