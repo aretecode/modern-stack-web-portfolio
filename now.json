@@ -1,10 +1,23 @@
 {
   "version": 2,
   "name": "modern-stack-skeletons",
+  "env": {
+    "IS_NOW": "true"
+  },
   "builds": [
     {
       "src": "packages/app/package.json",
       "use": "@now/next"
+    },
+    {
+      "src": "packages/graphql/package.json",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql/(.*)",
+      "dest": "/api/$1"
     }
   ]
 }
