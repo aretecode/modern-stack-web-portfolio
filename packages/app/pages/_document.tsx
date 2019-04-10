@@ -157,7 +157,7 @@ export default class MyDocument extends Document {
 
     return (
       <AmpHtml isAmp={isAmp}>
-        <Head isAmp={isAmp}>
+        <Head>
           <AmpHeader href={url} isAmp={isAmp} />
           {title}
           {ampScriptTags}
