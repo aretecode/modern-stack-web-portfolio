@@ -5,7 +5,7 @@ const resumeBaseUrl = `http://localhost:5555/resumes`
 export default {
   Query: {
     resume: async (obj, args, context, info) => {
-      const {id} = args
+      const { id } = args
       const res = await fetch(`${resumeBaseUrl}/${id}`)
       const response = await res.json()
 
@@ -23,8 +23,8 @@ export default {
   },
   Mutation: {
     createResume: async (obj, args, context, info) => {
-      const {userId, input} = args
-      const {title, completed} = input
+      const { userId, input } = args
+      const { title, completed } = input
 
       const res = await fetch(resumeBaseUrl, {
         method: 'POST',
@@ -43,7 +43,7 @@ export default {
       return response
     },
     updateResume: async (obj, args, context, info) => {
-      const {id, input} = args
+      const { id, input } = args
 
       const res = await fetch(`${resumeBaseUrl}/${id}`, {
         method: 'POST',
@@ -59,30 +59,8 @@ export default {
 
       return response
     },
-    toggleResume: async (obj, args, context, info) => {
-      const {id} = args
-
-      const res = await fetch(`${resumeBaseUrl}/${id}`)
-      const resume = await res.json()
-
-      resume.completed = !resume.completed
-
-      const put = await fetch(`${resumeBaseUrl}/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...resume,
-        }),
-      })
-
-      const response = await put.json()
-
-      return response
-    },
     deleteResume: async (obj, args, context, info) => {
-      const {id} = args
+      const { id } = args
 
       const res = await fetch(`${resumeBaseUrl}/${id}`, {
         method: 'DELETE',

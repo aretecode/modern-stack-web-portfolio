@@ -1,0 +1,14 @@
+projects:
+  modern-stack-skeletons-graphql:
+    schemaPath: src/generated/schema.graphql
+    extensions:
+      endpoints:
+        dev: 'http://localhost:4000'
+        prepare-bundle: dist/generated/output.graphql
+      generate-fragments:
+        output: dist/generated/fragments.graphql
+        generator: graphql
+      prepare-binding:
+        output: src/generated/types.ts
+        generator: binding-ts
+      prepare-bundle: dist/generated/bundle.graphql
