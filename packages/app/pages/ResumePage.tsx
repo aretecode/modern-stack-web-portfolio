@@ -20,6 +20,9 @@ export const StyledGrid = styled.div`
   grid-auto-rows: auto;
 `
 
+/**
+ * could use https://amp.dev/documentation/examples/components/amp-timeago/
+ */
 const StyledTime = styled.time`
   display: inline-flex;
 `
@@ -27,6 +30,9 @@ const StyledTime = styled.time`
 /**
  * @see https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
  * @see https://addyosmani.com/blog/lazy-loading/
+ *
+ * @todo @@styles probably should align the card image to center
+ *                and add blur mirror effect to sides for consistency
  */
 const StyledCardImage = styled(StyledImage).attrs({
   loading: 'lazy',

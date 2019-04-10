@@ -19,6 +19,9 @@ import {
   StyledArrow,
   StyledButton,
   StyledLink,
+  StyledNav,
+  StyledFigCaption,
+  StyledFigure,
 } from './styled'
 
 export default class AboutPage extends React.PureComponent {
@@ -40,9 +43,9 @@ export default class AboutPage extends React.PureComponent {
       <>
         <StyledAboutMeArticle>
           <SocialProfiles />
-          <figure>
+          <StyledFigure>
             <StyledAboutMeImg src={picture} alt="about me picture" />
-            <figcaption>
+            <StyledFigCaption>
               <StyledName>{name}</StyledName>
               <StyledLabel>
                 {label.split('⇔').shift()}
@@ -51,7 +54,7 @@ export default class AboutPage extends React.PureComponent {
               </StyledLabel>
               <StyledSeparator />
               <StyledSummary>{summary}</StyledSummary>
-              <nav>
+              <StyledNav>
                 <section>
                   <header>Phone</header>
                   <StyledLink to={`tel:${telephone}`}>+{telephone}</StyledLink>
@@ -60,12 +63,12 @@ export default class AboutPage extends React.PureComponent {
                   <header>Email</header>
                   <StyledLink to={`mailto:${email}`}>{email}</StyledLink>
                 </section>
-              </nav>
+              </StyledNav>
               <StyledButtonWrap>
                 <StyledButton>Portfolio</StyledButton>
               </StyledButtonWrap>
-            </figcaption>
-          </figure>
+            </StyledFigCaption>
+          </StyledFigure>
         </StyledAboutMeArticle>
       </>
     )

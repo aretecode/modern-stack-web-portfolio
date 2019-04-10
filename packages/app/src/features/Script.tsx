@@ -10,6 +10,14 @@ export interface CombinedScriptProps {
   children: { [key: string]: unknown }
 }
 
+function serializeScriptChildren(children: unknown) {
+  return isObj(children)
+    ? process.env.NODE_ENV === 'development'
+      ? JSON.stringify(children, undefined, 2)
+      : JSON.stringify(children)
+    : children
+}
+
 /**
  * could have defaultProps for type
  * can split render to small fns
@@ -19,7 +27,7 @@ export class Script extends React.PureComponent<ScriptProps> {
     const { type, src, children, ...remainingProps } = this
       .props as CombinedScriptProps
 
-    const json = isObj(children) ? JSON.stringify(children) : children
+    const json = serializeScriptChildren(children)
     const scriptType =
       type === undefined && isObj(children) ? 'application/ld+json' : type
 

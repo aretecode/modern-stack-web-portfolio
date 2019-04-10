@@ -6,6 +6,7 @@ export class DynamicLink extends React.PureComponent<LinkProps> {
   render() {
     const { to, href, theme, ...remainingProps } = this.props
     const toHref = to || href || ''
+
     if (toHref.includes('http')) {
       return <a {...remainingProps} href={toHref} />
     } else {
@@ -14,7 +15,7 @@ export class DynamicLink extends React.PureComponent<LinkProps> {
   }
 }
 
-export const StyledLink = styled(BaseLink)`
+export const StyledLink = styled(DynamicLink)`
   text-decoration: none;
   position: relative;
   display: inline-flex;

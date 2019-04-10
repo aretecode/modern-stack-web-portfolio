@@ -3,6 +3,7 @@
  * but that wasn't needed here
  */
 import * as React from 'react'
+import { WorkType } from '../typings'
 import { ResumeContext, ResumeContextType } from './ResumeContext'
 import { Script } from './Script'
 
@@ -15,12 +16,16 @@ import { Script } from './Script'
  *
  * @see https://schema.org/PostalAddress
  * @see https://schema.org/Person
- *
  * @todo https://schema.org/knowsAbout for skills
  * @see http://blog.schema.org/2014/06/introducing-role.html
  * @see https://schema.org/Role
  * @see https://schema.org/OrganizationRole
  * @see https://schema.org/EmployeeRole
+ *
+ *
+ *
+ * @see https://developers.google.com/search/docs/guides/mark-up-listings
+ * @note when using detailed information it uses _Single, all-in-one-page list_. This requires them all to use the same url.
  */
 function fromContextToSchema(context: ResumeContextType) {
   const { basics, work } = context
@@ -41,23 +46,43 @@ function fromContextToSchema(context: ResumeContextType) {
     },
   }
 
+  /**
+   * could scope this function outside, so it is not a closure
+   * but this function is lightweight
+   * and is used to at least reuse this small piece of functionality
+   */
+  function fromWorkItemToOrganization(workItem: WorkType) {
+    return {
+      '@type': 'Organization',
+      name: workItem.company,
+      url: personSchema.url + '?company=' + workItem.company,
+      member: {
+        '@type': 'OrganizationRole',
+        member: personSchema,
+        startDate: workItem.startDate,
+        endDate: workItem.endDate,
+        roleName: workItem.position,
+      },
+    }
+  }
+
   return {
     '@context': 'http://schema.org',
     '@graph': [
       personSchema,
-      ...work.map(workItem => {
-        return {
-          '@type': 'Organization',
-          name: workItem.company,
-          member: {
-            '@type': 'OrganizationRole',
-            member: personSchema,
-            startDate: workItem.startDate,
-            endDate: workItem.endDate,
-            roleName: workItem.position,
-          },
-        }
-      }),
+      ...work.map(fromWorkItemToOrganization),
+
+      {
+        '@type': 'ItemList',
+        itemListElement: work.map((workItem, index) => {
+          return {
+            '@type': 'ListItem',
+            // starts @1
+            position: index + 1,
+            item: fromWorkItemToOrganization(workItem),
+          }
+        }),
+      },
     ],
   }
 }

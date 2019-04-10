@@ -28,6 +28,8 @@ export const typeDefs = gql`
     countryCode: string
     region: string
     profiles: [Profile]
+    resumeWebsite: string
+    skills: [string]
   }
   type Work {
     company: string
@@ -77,6 +79,8 @@ export const apolloState = {
         city: '',
         countryCode: '',
         region: '',
+        resumeWebsite: '',
+        skills: [],
       },
       work: [],
     } as any,

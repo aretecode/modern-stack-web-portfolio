@@ -18,6 +18,10 @@ export default gql`
         city
         countryCode
         region
+
+        resumeWebsite
+        skills
+
         profiles {
           __typename
           network
