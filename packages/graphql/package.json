@@ -2,6 +2,7 @@
   "name": "modern-stack-skeleton-graphql",
   "version": "0.0.1",
   "scripts": {
+    "now-build": "tsc",
     "install:workspace": "cd ../../ && yarn install && cd packages/graphql",
     "build": "tsc --outDir dist || true",
     "start": "node dist/index.js",
@@ -33,6 +34,7 @@
     "express": "4.16.4"
   },
   "devDependencies": {
+    "typescript": "3.4.2",
     "@types/pino": "5.8.6",
     "@types/mkdirp": "0.5.2"
   }
