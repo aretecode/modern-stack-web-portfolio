@@ -1,4 +1,5 @@
 const withTypescript = require('@zeit/next-typescript')
+const withOffline = require('next-offline')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 /**
@@ -13,6 +14,10 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
  *     REALM_TYPE: 'browser' | 'node'
  *   }
  */
-module.exports = withTypescript({
+const typescriptConfig = withTypescript({
   target: 'serverless',
 })
+
+const workboxConfig = withOffline(typescriptConfig)
+
+module.exports = workboxConfig
