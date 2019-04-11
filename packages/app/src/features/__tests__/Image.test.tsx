@@ -16,4 +16,15 @@ describe('Image', () => {
     )
     expect(container.innerHTML).toContain('<amp-img')
   })
+  it('should render an "amp-img" with only amp attributes', () => {
+    const src =
+      'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
+    const { container } = render(
+      <AmpContext.Provider value={{ isAmp: true }}>
+        <Image src={src} ignored={true} />
+      </AmpContext.Provider>
+    )
+    expect(container.firstChild!.getAttribute('src')).toEqual(src)
+    expect(container.firstChild!.getAttribute('ignored')).toEqual(null)
+  })
 })
