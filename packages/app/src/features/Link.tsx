@@ -3,7 +3,9 @@ import { Link as BaseLink, LinkProps } from 'react-router-dom'
 // import BaseLink from 'next/link'
 import styled from 'styled-components'
 
-export class DynamicLink extends React.PureComponent<LinkProps> {
+export class DynamicLink extends React.PureComponent<
+  LinkProps & { theme?: any }
+> {
   render() {
     const { to, href, theme, ...remainingProps } = this.props
     const toHref = to || href || ''
