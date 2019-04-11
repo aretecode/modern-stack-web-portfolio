@@ -122,11 +122,17 @@ export default class ResumePage extends React.PureComponent {
   readonly context: ResumeContextType
 
   render() {
+    const { name, summary } = this.context.basics
+    const titleText = `${name}'s Resume`
+
     return (
       <>
         <Head>
-          <title>Resume {this.context.basics.name}</title>
-          <description>{this.context.basics.summary}</description>
+          <title>{titleText}</title>
+          <meta name="description" content={summary || titleText} />
+          <meta name="theme-color" content={'#6200ee'} />
+          <meta property="og:site_name" content={titleText} />
+          <meta property="og:locale" content="en_CA" />
         </Head>
         <StyledMain>
           <StyledGrid>{this.context.work.map(renderWork)}</StyledGrid>

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Helmet } from 'react-helmet'
 import ResumePage from '../pages/ResumePage'
 import AboutPage from '../pages/AboutPage'
 import Footer from './features/Footer'
@@ -31,9 +30,6 @@ export default class App extends React.PureComponent {
         <AppStyles />
         <GoogleDocument />
         <AppWrap>
-          <Helmet>
-            <title>app</title>
-          </Helmet>
           <Header />
           <ResumeSchema />
           {this.props.children}

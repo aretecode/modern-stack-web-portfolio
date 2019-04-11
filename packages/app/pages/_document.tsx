@@ -1,6 +1,8 @@
 /**
  * @see https://nextjs.org/docs/
  * @see https://github.com/dfrankland/react-amphtml/issues/29
+ * @see https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect
+ * @see https://css-tricks.com/prefetching-preloading-prebrowsing/#article-header-id-3
  */
 import * as React from 'react'
 import Document, {
@@ -163,6 +165,29 @@ export default class MyDocument extends Document {
           {title}
           {ampScriptTags}
           {ampStyleTag}
+          <meta itemProp="accessibilityControl" content="fullKeyboardControl" />
+          <meta itemProp="accessibilityControl" content="fullMouseControl" />
+          <meta itemProp="typicalAgeRange" content="20-60" />
+          <link rel="dns-prefetch" href="//fonts.gstatic.com/" />
+          <link rel="preconnect" href="//fonts.gstatic.com/" />
+          <link
+            rel="preload"
+            href="https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2"
+            as="font"
+            crossOrigin={'crossOrigin'}
+          />
+          <link
+            rel="preload"
+            href="https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2"
+            as="font"
+            crossOrigin={'crossOrigin'}
+          />
+          <link
+            rel="preload"
+            href="https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2"
+            as="font"
+            crossOrigin={'crossOrigin'}
+          />
         </Head>
         <body>
           <Main />
