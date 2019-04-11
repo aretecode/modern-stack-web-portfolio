@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Link as BaseLink, LinkProps } from 'react-router-dom'
 // import BaseLink from 'next/link'
 import styled from 'styled-components'
