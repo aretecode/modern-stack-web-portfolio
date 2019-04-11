@@ -59,7 +59,7 @@ if (IS_REALM_WITHOUT_INDEX_DB) {
     put(namespace: string, key: string, value: any) {
       return inMemoryStore.set(key, value)
     },
-    delete(namespace: string, key: string, value: any) {
+    delete(namespace: string, value: any, key: string) {
       return inMemoryStore.set(key, value)
     },
     get(namespace: string, key: string) {
@@ -87,7 +87,7 @@ const resumeKeyValStore = {
     key: Key,
     val: SpecificResumeSchemaType[Key]['value']
   ) {
-    return (await dbResumePromise).put('resume', key, val)
+    return (await dbResumePromise).put('resume', val, key)
   },
   /**
    * @todo (#ts) top level key generic
