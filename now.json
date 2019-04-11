@@ -17,7 +17,11 @@
   "routes": [
     {
       "src": "/graphql/(.*)",
-      "dest": "/api/$1"
+      "dest": "/packages/graphql/package.json"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/packages/app/$1"
     }
   ]
 }
