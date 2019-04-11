@@ -62,33 +62,54 @@ export const typeDefs = gql`
   }
 `
 
+export const defaultApolloStateResume = {
+  __typename: 'Resume',
+  basics: {
+    __typename: 'Basics',
+    name: '',
+    label: '',
+    picture: '',
+    email: '',
+    telephone: '',
+    website: '',
+    summary: '',
+    profiles: [
+      {
+        __typename: 'Profile',
+        network: 'linkedin',
+        username: 'aretecode',
+        url: 'https://www.linkedin.com/in/james-wiens/',
+      },
+    ],
+    address: '',
+    postalCode: '',
+    city: '',
+    countryCode: '',
+    region: '',
+    resumeWebsite: '',
+    skills: ['skill1'],
+  },
+  work: [
+    {
+      __typename: 'Work',
+      company: 'Open Source',
+      position: '',
+      website: 'https://github.com/aretecode',
+      startDate: '01/02/2013',
+      endDate: 'current',
+      picture:
+        'https://user-images.githubusercontent.com/4022631/55686780-04f0f980-5983-11e9-8152-204681b0840f.png',
+    },
+  ],
+}
+
 // tslint:disable typedef
 // @lint: ^ this is because we have typings for resolvers
 //          no need to define for each method
 export const apolloState = {
+  // @todo as WithTypeNameRecursive<ResumeType>
   defaults: {
-    resume: {
-      __typename: 'Resume',
-      basics: {
-        __typename: 'Basics',
-        name: '',
-        label: '',
-        picture: '',
-        email: '',
-        telephone: '',
-        website: '',
-        summary: '',
-        profiles: [],
-        address: '',
-        postalCode: '',
-        city: '',
-        countryCode: '',
-        region: '',
-        resumeWebsite: '',
-        skills: [],
-      },
-      work: [],
-    } as WithTypeNameRecursive<ResumeType>,
+    resume: defaultApolloStateResume,
   },
   resolvers: {
     Query: {
