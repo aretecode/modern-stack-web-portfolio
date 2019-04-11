@@ -18,7 +18,7 @@ import { AppStyles, BelowTheFoldStyles } from './AppStyles'
  *    import { resumeKeyValStore } from './storage'
  *    resumeKeyValStore.set('resume', resume)
  */
-import './__resume'
+// import './__resume'
 import './apolloStateRehydrate'
 
 /**
