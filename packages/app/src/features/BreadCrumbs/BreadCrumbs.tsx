@@ -1,7 +1,8 @@
 /**
  * @todo connect to query params
  * @todo put in scroll action of Header
- * @todo schema
+ * @todo schema (data)
+ * @todo not sure this is needed for this site
  */
 import * as React from 'react'
 
@@ -13,14 +14,8 @@ function toBreadCrumbsSchema() {
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Books',
-        item: 'https://jameswiens.com/books',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Authors',
-        item: 'https://jameswiens.com/books/authors',
+        name: 'Home',
+        item: 'https://jameswiens.com/',
       },
     ],
   }
