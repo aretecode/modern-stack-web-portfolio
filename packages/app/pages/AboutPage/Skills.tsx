@@ -9,16 +9,15 @@ export default class Skills extends React.PureComponent {
   readonly context: ResumeContextType
 
   render() {
-    const { profiles } = this.context.basics
+    const { skills } = this.context.basics
     return (
       <aside>
         <header>skills</header>
         <ol>
-          <li>skill 1</li>
+          {skills.map(x => (
+            <li key={x}>{x}</li>
+          ))}
         </ol>
-        {profiles.map(x => (
-          <span {...x} />
-        ))}
       </aside>
     )
   }
