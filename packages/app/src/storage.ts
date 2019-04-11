@@ -56,11 +56,11 @@ if (IS_REALM_WITHOUT_INDEX_DB === false) {
 if (IS_REALM_WITHOUT_INDEX_DB) {
   const inMemoryStore = new Map<any, any>()
   const promiseOverride: any = Promise.resolve({
-    put(namespace: string, key: string, value: any) {
+    put(namespace: string, value: any, key: string) {
       return inMemoryStore.set(key, value)
     },
-    delete(namespace: string, value: any, key: string) {
-      return inMemoryStore.set(key, value)
+    delete(namespace: string, key: string) {
+      return inMemoryStore.delete(key)
     },
     get(namespace: string, key: string) {
       return inMemoryStore.get(key)
