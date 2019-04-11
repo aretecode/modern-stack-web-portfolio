@@ -54,10 +54,7 @@ if (IS_REALM_WITHOUT_INDEX_DB === false) {
  * - ...
  */
 if (IS_REALM_WITHOUT_INDEX_DB) {
-  const inMemoryStore = (IS_REALM_WITHOUT_INDEX_DB && new Map()) as Map<
-    any,
-    any
-  >
+  const inMemoryStore = new Map<any, any>()
   const promiseOverride: any = Promise.resolve({
     put(namespace: string, key: string, value: any) {
       return inMemoryStore.set(key, value)
@@ -70,7 +67,9 @@ if (IS_REALM_WITHOUT_INDEX_DB) {
     },
     // no args for these guys, unless we namespace a map or use the node fs mock
     clear: inMemoryStore.clear.bind(inMemoryStore),
-    keys: inMemoryStore.keys.bind(inMemoryStore),
+    getAllKeys: inMemoryStore.keys.bind(inMemoryStore),
+    // added here for debug
+    store: inMemoryStore,
   })
   dbResumePromise = promiseOverride
 }
@@ -88,14 +87,16 @@ const resumeKeyValStore = {
     key: Key,
     val: SpecificResumeSchemaType[Key]['value']
   ) {
-    return (await dbResumePromise).put('resume', val, key)
+    return (await dbResumePromise).put('resume', key, val)
   },
   /**
    * @todo (#ts) top level key generic
    */
-  async delete<Key extends keyof SpecificResumeSchemaType['resume']['value']>(
-    key: Key
-  ) {
+  async delete<
+    Key extends
+      | keyof SpecificResumeSchemaType['resume']['value']
+      | keyof SpecificResumeSchemaType
+  >(key: Key) {
     return (await dbResumePromise).delete('resume', key)
   },
   async clear() {
@@ -106,4 +107,5 @@ const resumeKeyValStore = {
   },
 }
 
+export const dbResumeReference = dbResumePromise
 export { resumeKeyValStore }
