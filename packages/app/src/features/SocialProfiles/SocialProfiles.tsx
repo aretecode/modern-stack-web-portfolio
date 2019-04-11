@@ -34,7 +34,7 @@ export function renderProfileItem(profile: ProfileType, index?: number) {
   return (
     <StyledLink
       rel="me"
-      href={profile.url}
+      to={profile.url}
       title={profile.username}
       key={profile.url}
     >
@@ -55,11 +55,12 @@ export default class SocialProfiles extends React.PureComponent {
     return (
       <StyledSocialProfilesWrap>
         {this.context.basics.profiles.map(renderProfileItem)}
-        {renderProfileItem({
-          url: this.context.basics.resumeWebsite,
-          username: 'download resume',
-          network: 'pdf',
-        })}
+        {this.context.basics.resumeWebsite !== '' &&
+          renderProfileItem({
+            url: this.context.basics.resumeWebsite,
+            username: 'download resume',
+            network: 'pdf',
+          })}
       </StyledSocialProfilesWrap>
     )
   }
