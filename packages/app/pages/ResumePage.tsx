@@ -3,7 +3,7 @@
  * @file @todo split styled pieces
  */
 import * as React from 'react'
-import { Helmet } from 'react-helmet'
+import Head from 'next/head'
 import styled from 'styled-components'
 import { ResumeContext, ResumeContextType } from '../src/features/ResumeContext'
 import { StyledCard } from '../src/features/Card'
@@ -124,9 +124,10 @@ export default class ResumePage extends React.PureComponent {
   render() {
     return (
       <>
-        <Helmet>
-          <title>resume</title>
-        </Helmet>
+        <Head>
+          <title>Resume {this.context.basics.name}</title>
+          <description>{this.context.basics.summary}</description>
+        </Head>
         <StyledMain>
           <StyledGrid>{this.context.work.map(renderWork)}</StyledGrid>
         </StyledMain>
