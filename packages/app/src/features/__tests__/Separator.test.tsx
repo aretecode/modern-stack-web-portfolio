@@ -5,6 +5,6 @@ import { StyledSeparator } from '../Separator'
 describe('Separator', () => {
   it('should match snapshot', () => {
     const { container } = render(<StyledSeparator />)
-    expect(container.innerHTML).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })

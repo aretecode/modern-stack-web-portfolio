@@ -8,7 +8,7 @@ import { defaultApolloStateResume } from '../../../apolloState'
 describe('SocialProfiles', () => {
   it('should render icon for name', () => {
     const { container } = render(<SocialProfileIcon icon="pdf" />)
-    expect(container.innerHTML).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
   it('should render all for context', () => {
     const { container } = render(
@@ -16,6 +16,6 @@ describe('SocialProfiles', () => {
         <SocialProfiles />
       </ResumeContext.Provider>
     )
-    expect(container.innerHTML).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })

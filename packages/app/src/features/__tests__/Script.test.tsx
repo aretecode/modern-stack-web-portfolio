@@ -5,7 +5,7 @@ import { Script } from '../Script'
 describe('Script', () => {
   it('should render empty without an error (except for types)', () => {
     const { container } = render(<Script />)
-    expect(container.innerHTML).toContain('<script')
+    expect(container).toContain('<script')
   })
   it('should use "application/ld+json" when children is an object', () => {
     const children = { isTest: true }

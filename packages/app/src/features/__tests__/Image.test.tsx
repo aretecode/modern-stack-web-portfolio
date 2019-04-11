@@ -6,7 +6,7 @@ import { AmpContext } from '../AmpContext'
 describe('Image', () => {
   it('should render empty without an error (except for types)', () => {
     const { container } = render(<Image />)
-    expect(container.innerHTML).toContain('<img')
+    expect(container).toContain('<img')
   })
   it('should render an "amp-img" when providing an AmpContext', () => {
     const { container } = render(
@@ -14,6 +14,6 @@ describe('Image', () => {
         <Image />
       </AmpContext.Provider>
     )
-    expect(container.innerHTML).toContain('<amp-img')
+    expect(container).toContain('<amp-img')
   })
 })

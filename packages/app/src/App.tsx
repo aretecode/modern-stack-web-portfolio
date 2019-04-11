@@ -6,6 +6,7 @@ import Footer from './features/Footer'
 import Header from './features/Header'
 import AppWrap from './AppWrap'
 import { ResumeSchema } from './features/ResumeSchema'
+import GoogleDocument from './features/GoogleDocument'
 import { StyledVectorFilter } from './features/VectorFilter'
 import { AppStyles, BelowTheFoldStyles } from './AppStyles'
 /**
@@ -17,7 +18,7 @@ import { AppStyles, BelowTheFoldStyles } from './AppStyles'
  *    import { resumeKeyValStore } from './storage'
  *    resumeKeyValStore.set('resume', resume)
  */
-// import './__resume'
+import './__resume'
 import './apolloStateRehydrate'
 
 /**
@@ -28,6 +29,7 @@ export default class App extends React.PureComponent {
     return (
       <>
         <AppStyles />
+        <GoogleDocument />
         <AppWrap>
           <Helmet>
             <title>app</title>
