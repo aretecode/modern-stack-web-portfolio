@@ -97,6 +97,8 @@ export const defaultApolloStateResume = {
       website: 'https://github.com/aretecode',
       startDate: '01/02/2013',
       endDate: 'current',
+      summary: '',
+      highlights: '',
       picture:
         'https://user-images.githubusercontent.com/4022631/55686780-04f0f980-5983-11e9-8152-204681b0840f.png',
     },
