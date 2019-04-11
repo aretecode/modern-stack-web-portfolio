@@ -140,7 +140,7 @@ export default class MyDocument extends Document {
         styles: (
           <>
             {initialProps.styles}
-            {styleElements}
+            {isAmp === false && styleElements}
           </>
         ),
         ampScriptTags,

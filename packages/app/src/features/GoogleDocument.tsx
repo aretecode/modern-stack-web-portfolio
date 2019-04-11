@@ -15,7 +15,8 @@ export default class GoogleDocument extends React.PureComponent {
     return (
       <AmpContext.Consumer>
         {({ isAmp }) =>
-          isAmp === true && (
+          isAmp === true &&
+          !!resumeWebsite && (
             <>
               <Head>
                 <script
