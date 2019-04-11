@@ -8,7 +8,7 @@ export class DynamicLink extends React.PureComponent<
 > {
   render() {
     const { to, href, theme, ...remainingProps } = this.props
-    const toHref = to || href || ''
+    const toHref = (to || href || '') as string
 
     if (toHref.includes('http')) {
       return <a {...remainingProps} href={toHref} />
@@ -21,12 +21,10 @@ export class DynamicLink extends React.PureComponent<
 export const StyledLink = styled(DynamicLink)`
   text-decoration: none;
   position: relative;
-  display: inline-flex;
   letter-spacing: 0.2em;
+
   color: var(--color-link);
-  border-bottom: 3px solid var(--color-link);
   padding-bottom: 2px;
-  transition: 0.3s;
 
   &:link,
   &:visited {
@@ -37,15 +35,14 @@ export const StyledLink = styled(DynamicLink)`
     position: absolute;
     content: '\\0020';
     z-index: 2;
-    border-bottom: 3px solid;
-    border-bottom-color: inherit;
+    border-bottom: 3px solid var(--color-link);
     right: 0;
     bottom: -3px;
     left: 0;
     transition: border-bottom-width 0.3s;
   }
   &:hover:after {
-    border-bottom-width: 5px;
+    border-bottom-width: 0.5rem;
   }
   &:focus {
     outline: thin dotted;

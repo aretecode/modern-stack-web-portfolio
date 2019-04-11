@@ -69,8 +69,8 @@ export const defaultApolloStateResume = {
     name: '',
     label: '',
     picture: '',
-    email: '',
-    telephone: '',
+    email: 'james@jameswiens.com',
+    telephone: '12506509455',
     website: '',
     summary: '',
     profiles: [

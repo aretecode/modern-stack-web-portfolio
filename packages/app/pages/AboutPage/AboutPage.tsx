@@ -30,7 +30,6 @@ export default class AboutPage extends React.PureComponent {
 
   render() {
     const {
-      profiles,
       name,
       label = '',
       picture,

@@ -5,8 +5,9 @@ import { AmpContextValueType, AmpContext } from './AmpContext'
 /**
  * can add `<noscript><img>` inside
  * @see https://amp.dev/documentation/examples/components/amp-img/?referrer=ampbyexample.com
+ *
+ * @todo add `srcset` because they don't stretch
  */
-
 export class Image extends React.PureComponent<
   React.ImgHTMLAttributes<HTMLImageElement>
 > {

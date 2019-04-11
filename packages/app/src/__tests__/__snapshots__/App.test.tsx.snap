@@ -62,19 +62,12 @@ exports[`app should match snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
   -ms-letter-spacing: 0.2em;
   letter-spacing: 0.2em;
   color: var(--color-link);
-  border-bottom: 3px solid var(--color-link);
   padding-bottom: 2px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .c4:link,
@@ -87,8 +80,7 @@ exports[`app should match snapshot 1`] = `
   position: absolute;
   content: '\\0020';
   z-index: 2;
-  border-bottom: 3px solid;
-  border-bottom-color: inherit;
+  border-bottom: 3px solid var(--color-link);
   right: 0;
   bottom: -3px;
   left: 0;
@@ -97,7 +89,7 @@ exports[`app should match snapshot 1`] = `
 }
 
 .c4:hover:after {
-  border-bottom-width: 5px;
+  border-bottom-width: 0.5rem;
 }
 
 .c4:focus {
@@ -163,19 +155,12 @@ exports[`app should match snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-letter-spacing: 0.2em;
   -moz-letter-spacing: 0.2em;
   -ms-letter-spacing: 0.2em;
   letter-spacing: 0.2em;
   color: var(--color-link);
-  border-bottom: 3px solid var(--color-link);
   padding-bottom: 2px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .c23:link,
@@ -188,8 +173,7 @@ exports[`app should match snapshot 1`] = `
   position: absolute;
   content: '\\0020';
   z-index: 2;
-  border-bottom: 3px solid;
-  border-bottom-color: inherit;
+  border-bottom: 3px solid var(--color-link);
   right: 0;
   bottom: -3px;
   left: 0;
@@ -198,7 +182,7 @@ exports[`app should match snapshot 1`] = `
 }
 
 .c23:hover:after {
-  border-bottom-width: 5px;
+  border-bottom-width: 0.5rem;
 }
 
 .c23:focus {
@@ -411,7 +395,6 @@ exports[`app should match snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  grid-area: banner;
   height: 4rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -597,11 +580,6 @@ exports[`app should match snapshot 1`] = `
 }
 
 <div>
-  <amp-google-document-embed
-    height="5"
-    layout="responsive"
-    width="8.5"
-  />
   <header
     class="c0"
     role="banner"
@@ -651,7 +629,7 @@ exports[`app should match snapshot 1`] = `
   <script
     type="application/ld+json"
   >
-    {"@context":"http://schema.org","@graph":[{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"","telephone":"","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},{"@type":"Organization","name":"Open Source","url":"?company=Open Source","member":{"@type":"OrganizationRole","member":{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"","telephone":"","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},"startDate":"01/02/2013","endDate":"current","roleName":""}},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Organization","name":"Open Source","url":"?company=Open Source","member":{"@type":"OrganizationRole","member":{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"","telephone":"","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},"startDate":"01/02/2013","endDate":"current","roleName":""}}}]}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"james@jameswiens.com","telephone":"12506509455","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},{"@type":"Organization","name":"Open Source","url":"?company=Open Source","member":{"@type":"OrganizationRole","member":{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"james@jameswiens.com","telephone":"12506509455","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},"startDate":"01/02/2013","endDate":"current","roleName":""}},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Organization","name":"Open Source","url":"?company=Open Source","member":{"@type":"OrganizationRole","member":{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"james@jameswiens.com","telephone":"12506509455","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},"startDate":"01/02/2013","endDate":"current","roleName":""}}}]}]}
   </script>
   <main
     class=""
@@ -725,7 +703,7 @@ exports[`app should match snapshot 1`] = `
           class="c13"
           role="img"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
         >
           <title>
             linkedin
@@ -783,10 +761,10 @@ exports[`app should match snapshot 1`] = `
             </header>
             <a
               class="c23"
-              href="/tel:"
+              href="/tel:12506509455"
             >
               +
-              
+              12506509455
             </a>
           </section>
           <section>
@@ -795,8 +773,10 @@ exports[`app should match snapshot 1`] = `
             </header>
             <a
               class="c23"
-              href="/mailto:"
-            />
+              href="/mailto:james@jameswiens.com"
+            >
+              james@jameswiens.com
+            </a>
           </section>
         </nav>
         <div
