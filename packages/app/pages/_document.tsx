@@ -41,7 +41,7 @@ class AmpHtml extends React.PureComponent<{ isAmp?: boolean }> {
  * @note we are inlining this to avoid amp violations where `next` gives duplicate tags
  * @see https://github.com/dfrankland/react-amphtml/blob/7221879f49f289855a2574557afbead811c532a8/src/setup/headerBoilerplate.js
  */
-class AmpHeader extends React.PureComponent<{ href?: string; isAmp: boolean }> {
+class AmpHeader extends React.PureComponent<{ href: string; isAmp: boolean }> {
   render() {
     if (this.props.isAmp === false) {
       return <link rel="amphtml" href={this.props.href + '?amp'} />
@@ -49,7 +49,11 @@ class AmpHeader extends React.PureComponent<{ href?: string; isAmp: boolean }> {
 
     return (
       <>
-        <link key={'canonical-link'} rel="canonical" href={this.props.href} />
+        <link
+          key={'canonical-link'}
+          rel="canonical"
+          href={this.props.href.replace('?amp', '')}
+        />
         <style
           key={'style'}
           amp-boilerplate=""
