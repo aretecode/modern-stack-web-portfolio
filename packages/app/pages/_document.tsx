@@ -3,6 +3,9 @@
  * @see https://github.com/dfrankland/react-amphtml/issues/29
  * @see https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect
  * @see https://css-tricks.com/prefetching-preloading-prebrowsing/#article-header-id-3
+ * @see https://medium.com/clio-calliope/making-google-fonts-faster-aadf3c02a36d
+ *
+ * @todo https://stackoverflow.com/questions/51619109/next-js-pwa-service-worker-manifest-json
  */
 import * as React from 'react'
 import Document, {
