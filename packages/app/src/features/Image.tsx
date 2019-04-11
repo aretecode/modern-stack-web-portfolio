@@ -8,6 +8,8 @@ import { keep } from '../utils/keep'
  * @see https://amp.dev/documentation/guides-and-tutorials/learn/common_attributes
  * @todo ^ add typings
  * @todo get image width & height on node side (which is rendered on server only anyway if in amp context)
+ *
+ * @see https://stackoverflow.com/questions/12539918/get-the-width-and-height-of-an-image-in-node-js
  */
 export const IMAGE_PROP_LIST_TO_KEEP_IN_AMP = Object.freeze([
   'src',

@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import Head from 'react-helmet'
 import Head from 'next/head'
 import { ResumeContext, ResumeContextType } from './ResumeContext'
 
