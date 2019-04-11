@@ -44,7 +44,7 @@ const setupJestConfig = (dirName = '<rootDir>') => {
      */
     globals: {
       'ts-jest': {
-        tsConfig: require('./tsconfig.test.json'),
+        tsConfig: require('./tsconfig.test.json').compilerOptions,
         diagnostics: {
           warnOnly: true,
         },
