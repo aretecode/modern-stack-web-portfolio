@@ -138,7 +138,7 @@ export const apolloState = {
         info
       ) {
         logger.info('[mutation] setResume')
-        logger.dir(args)
+        logger.info(args)
 
         const updated = {
           __typename: 'Resume',
