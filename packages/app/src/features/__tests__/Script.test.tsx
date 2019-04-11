@@ -11,13 +11,12 @@ describe('Script', () => {
     const children = { isTest: true }
     const { container } = render(<Script children={children} />)
 
-    expect(container.firstChild.getAttribute('type')).toEqual(
+    expect(container.firstChild!.getAttribute('type')).toEqual(
       'application/ld+json'
     )
   })
   it('should have no type when children is not an object', () => {
-    const children = { isTest: true }
-    const { container } = render(<Script children={children} />)
-    expect(container.firstChild.getAttribute('type')).toEqual(null)
+    const { container } = render(<Script />)
+    expect(container.firstChild!.getAttribute('type')).toEqual(null)
   })
 })
