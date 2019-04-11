@@ -1,10 +1,13 @@
-// tslint:disable typedef
-// @lint: ^ this is because we have typings, no need to define for each
+/**
+ * @fileOverview this file is for the client side graphql
+ *               it can be used with the `@client` directive
+ * @see https://www.apollographql.com/docs/react/essentials/local-state
+ */
 import { gql } from 'apollo-boost'
 import { withClientState } from 'apollo-link-state'
 import { cache } from './apolloCache'
 import { logger } from './log'
-import { Resolvers, ResumeType } from './typings'
+import { Resolvers, ResumeType, WithTypeNameRecursive } from './typings'
 import { addTypeName } from './utils/addTypeName'
 import ResumeQuery from './graphql/Resume'
 
@@ -59,9 +62,11 @@ export const typeDefs = gql`
   }
 `
 
+// tslint:disable typedef
+// @lint: ^ this is because we have typings for resolvers
+//          no need to define for each method
 export const apolloState = {
   defaults: {
-    // @todo WithTypeNameStrings<ResumeType>
     resume: {
       __typename: 'Resume',
       basics: {
@@ -83,7 +88,7 @@ export const apolloState = {
         skills: [],
       },
       work: [],
-    } as any,
+    } as WithTypeNameRecursive<ResumeType>,
   },
   resolvers: {
     Query: {
