@@ -7,7 +7,6 @@ export const StyledHeader = styled.header.attrs({
 
   width: 100%;
   display: flex;
-  grid-area: banner;
   height: 4rem;
   align-items: center;
 `
