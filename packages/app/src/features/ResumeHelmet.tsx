@@ -1,5 +1,6 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
+// import Head from 'react-helmet'
+import Head from 'next/head'
 import { ResumeContext, ResumeContextType } from './ResumeContext'
 
 export default class ResumeHelmet extends React.PureComponent {
@@ -38,7 +39,7 @@ export default class ResumeHelmet extends React.PureComponent {
 
     return (
       <>
-        <Helmet>
+        <Head>
           <meta property="og:image:secure_url" content={image} />
           <meta property="og:image" content={image} />
           <meta property="og:title" content={title} />
@@ -68,7 +69,7 @@ export default class ResumeHelmet extends React.PureComponent {
               </>
             )
           })}
-        </Helmet>
+        </Head>
       </>
     )
   }
