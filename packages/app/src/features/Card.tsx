@@ -3,10 +3,7 @@ import styled from 'styled-components'
 /**
  * @see https://material.io/design/components/cards.html#anatomy
  */
-export const StyledCard = styled.article.attrs({
-  'data-testid':
-    process.env.NODE_ENV === 'test' ? 'desktop-nav-wrap' : undefined,
-})`
+export const StyledCard = styled.article`
   color: var(--color-text-body);
   background-color: var(--color-dark-background-main);
 
