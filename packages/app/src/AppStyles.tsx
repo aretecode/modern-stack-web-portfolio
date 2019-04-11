@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components'
  * @see https://material.io/design/color/the-color-system.html#color-usage-palettes
  *
  *
- * 616161
+ * @todo https://fonts.google.com/specimen/Roboto
  */
 export const AppStyles = createGlobalStyle`
   :root {
