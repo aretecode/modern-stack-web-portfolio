@@ -67,7 +67,7 @@ function fromContextToSchema(context: ResumeContextType) {
   }
 
   return {
-    '@context': 'http://schema.org',
+    '@context': 'https://schema.org',
     '@graph': [
       personSchema,
       ...work.map(fromWorkItemToOrganization),
