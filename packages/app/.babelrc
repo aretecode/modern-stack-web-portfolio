@@ -5,14 +5,14 @@
         "next/babel",
         "@zeit/next-typescript/babel"
       ],
-      "plugins": [["styled-components", { "ssr": true, "pure": true }]]
+      "plugins": [["styled-components", { "ssr": true, "pure": true, "displayName": true }]]
     },
     "production": {
       "presets": [
         "next/babel",
         "@zeit/next-typescript/babel"
       ],
-      "plugins": [["styled-components", { "ssr": true, "pure": true, "minify": true }]]
+      "plugins": [["styled-components", { "ssr": true, "pure": true, "displayName": false }]]
     },
     "test": {
       "presets": [
@@ -26,7 +26,7 @@
         ],
         "@zeit/next-typescript/babel"
       ],
-      "plugins": [["styled-components", { "ssr": true }]]
+      "plugins": [["styled-components", { "ssr": true, "pure": true, "displayName": true }]]
     }
   }
 }
