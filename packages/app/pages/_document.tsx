@@ -23,7 +23,7 @@ import { AmpContext } from '../src/features/AmpContext'
 class AmpHtml extends React.PureComponent<{ isAmp?: boolean }> {
   render() {
     return this.props.isAmp === false ? (
-      <Html>{this.props.children}</Html>
+      <Html lang="en">{this.props.children}</Html>
     ) : (
       <Amp.Html specName="html ⚡ for top-level html" lang="en" amp="amp">
         {this.props.children}
