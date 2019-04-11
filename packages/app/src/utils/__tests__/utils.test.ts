@@ -4,8 +4,26 @@
 import { addTypeName } from '../addTypeName'
 import { requestIdleCallback } from '../requestIdleCallback'
 import { EMPTY_OBJ, EMPTY_ARRAY } from '../EMPTY'
+import { keep } from '../keep'
 
 describe('utils', () => {
+  describe('keep', () => {
+    it('should keep props we want, side effect free', () => {
+      const KEEP_LIST = Object.freeze(['src', 'alt'])
+      const obj = {
+        src: 'canada',
+        alt: 'eh',
+        moose: true,
+        igloo: 1,
+      }
+      const kept = keep(obj, KEEP_LIST)
+      expect(obj === kept).toEqual(false)
+      expect(kept).toEqual({
+        src: 'canada',
+        alt: 'eh',
+      })
+    })
+  })
   describe('addTypeName', () => {
     it('should return the same value for all basic types', () => {
       const list = ['string', 0, () => {}, undefined]
