@@ -5,6 +5,9 @@ export const StyledHeader = styled.header.attrs({
   role: 'banner',
 })`
   background-color: var(--color-material-background-purple);
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
 
   display: flex;
   align-items: center;
@@ -35,8 +38,4 @@ export const StyledLogo = styled.p.attrs({
   }
 `
 
-export const StyledLogoLink = styled(StyledLink)`
-  &:after {
-    display: none;
-  }
-`
+export const StyledLogoLink = styled(StyledLink)``

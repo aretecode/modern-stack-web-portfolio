@@ -37,31 +37,19 @@ export class DynamicLink extends React.PureComponent<
   }
 }
 
+/**
+ * could use styled theme
+ */
 export const StyledLink = styled(DynamicLink)`
   text-decoration: none;
   position: relative;
   letter-spacing: 0.2em;
 
   color: var(--color-link);
-  padding-bottom: 2px;
 
   &:link,
   &:visited {
     color: var(--color-link);
-  }
-  &:after {
-    display: block;
-    position: absolute;
-    content: '\\0020';
-    z-index: 2;
-    border-bottom: 3px solid var(--color-link);
-    right: 0;
-    bottom: -3px;
-    left: 0;
-    transition: border-bottom-width 0.3s;
-  }
-  &:hover:after {
-    border-bottom-width: 0.5rem;
   }
   &:focus {
     outline: thin dotted;

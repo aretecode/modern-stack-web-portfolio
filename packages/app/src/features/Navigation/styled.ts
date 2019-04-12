@@ -16,9 +16,6 @@ export const StyledNavList = styled.ul`
     display: inline-flex;
     > a {
       padding: 1rem;
-      &:after {
-        display: none;
-      }
     }
   }
 `
