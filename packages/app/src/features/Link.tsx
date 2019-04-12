@@ -1,7 +1,18 @@
 import * as React from 'react'
-import { Link as BaseLink, LinkProps } from 'react-router-dom'
-// import BaseLink from 'next/link'
+/**
+ * since we are using next, this is not working
+ */
+// import { Link as BaseLink, LinkProps } from 'react-router-dom'
+import { LinkProps } from 'react-router-dom'
+/**
+ * @todo @see https://raw.githubusercontent.com/zeit/next.js/canary/packages/next/client/link.js
+ * ^ does not accept className
+ * @see https://github.com/zeit/next.js/issues/1942#issuecomment-313925454
+ */
+import BaseLink from 'next/link'
 import styled from 'styled-components'
+
+export const StyledHref = styled.a``
 
 export class DynamicLink extends React.PureComponent<
   LinkProps & { theme?: any }
@@ -13,7 +24,15 @@ export class DynamicLink extends React.PureComponent<
     if (toHref.includes('http')) {
       return <a {...remainingProps} href={toHref} />
     } else {
-      return <BaseLink {...remainingProps} to={toHref} />
+      const { children, ...remaining } = remainingProps
+      return (
+        <BaseLink {...remaining} href={toHref}>
+          <StyledHref {...remaining} href={toHref}>
+            {children}
+          </StyledHref>
+        </BaseLink>
+      )
+      // return <BaseLink {...remainingProps} to={toHref} />
     }
   }
 }
