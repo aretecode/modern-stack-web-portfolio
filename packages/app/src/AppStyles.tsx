@@ -15,10 +15,12 @@ export const AppStyles = createGlobalStyle`
   :root {
     --color-red: #711c1c;
     --color-pink: #ff4081;
-    --color-purple: #5c6bc0;
+    --color-soft-purple: #5c6bc0;
     --color-purple-blue: #3f51b5;
     --color-material-background-purple: #6200ee;
 
+    --color-orange: #ff5722;
+    --color-deep-blue: #3b50ce;
     --color-dark-background-main: #344955;
     --color-dark-background-dark: #232f34;
     --color-dark-background-light: #4a6572;
@@ -80,6 +82,8 @@ export const AppStyles = createGlobalStyle`
   #__next {
     min-height: inherit;
     background-color: var(--color-dark-background-dark);
+    display: flex;
+    flex-direction: column;
   }
 `
 
