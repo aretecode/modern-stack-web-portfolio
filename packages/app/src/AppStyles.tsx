@@ -60,6 +60,7 @@ export const AppStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
+    background-color: var(--color-material-background-purple);
   }
   *, *:before, *:after {
     box-sizing: inherit;
