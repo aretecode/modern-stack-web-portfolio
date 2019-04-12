@@ -15,6 +15,7 @@ export const StyledSocialProfilesWrap = styled.aside`
   justify-content: space-between;
   flex-direction: column;
   transition: flex-direction 0.24s ease-in-out, width 0.24s ease-in-out;
+  height: inherit;
 
   @media (max-width: 1023px) {
     width: 100%;
