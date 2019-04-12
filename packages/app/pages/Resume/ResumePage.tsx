@@ -12,7 +12,12 @@ import { StyledCard } from '../../src/features/Card'
 import { StyledMain } from '../../src/features/Main'
 import { StyledLink } from '../../src/features/Link'
 import { WorkType } from '../../src/typings'
-import { StyledGrid, StyledCardImage, StyledCardFigure } from './styled'
+import {
+  StyledGrid,
+  StyledCardImage,
+  StyledCardFigure,
+  StyledLeaderBoard,
+} from './styled'
 import { TimeRange } from './TimeRange'
 
 function renderWork(work: WorkType) {
@@ -64,6 +69,9 @@ export class ResumePage extends React.PureComponent {
           <meta property="og:locale" content="en_CA" />
         </Head>
         <StyledMain>
+          <StyledLeaderBoard>
+            <h1>What I've done</h1>
+          </StyledLeaderBoard>
           <StyledGrid>{this.context.work.map(renderWork)}</StyledGrid>
         </StyledMain>
       </>

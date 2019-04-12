@@ -53,3 +53,23 @@ export const StyledCardFigure = styled.figure`
     }
   }
 `
+
+/**
+ * could pick a colour from a colour scheme each time...
+ */
+export const StyledLeaderBoard = styled.article`
+  background-color: var(--color-orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0 2rem 0;
+
+  > h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 300;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55), 0 2px 0 rgba(0, 0, 0, 0.1),
+      0 3px 0 rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.1);
+  }
+`
