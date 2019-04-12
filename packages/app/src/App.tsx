@@ -1,6 +1,4 @@
 import * as React from 'react'
-import ResumePage from '../pages/ResumePage'
-import AboutPage from '../pages/AboutPage'
 import Footer from './features/Footer'
 import Header from './features/Header'
 import AppWrap from './AppWrap'
@@ -33,8 +31,6 @@ export default class App extends React.PureComponent {
           <Header />
           <ResumeSchema />
           {this.props.children}
-          <ResumePage />
-          <AboutPage />
           <Footer />
           <StyledVectorFilter />
         </AppWrap>
