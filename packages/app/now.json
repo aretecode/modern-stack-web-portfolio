@@ -1,6 +1,9 @@
 {
   "version": 2,
   "name": "modern-stack-skeletons-app",
+  "env": {
+    "IS_NOW": "true"
+  },
   "builds": [
     { 
       "src": "package.json",

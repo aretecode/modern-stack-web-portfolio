@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "env": {
+    "IS_NOW": "true"
+  },
   "builds": [
     { "src": "index.js", "use": "@now/node-server" }
   ],
