@@ -57,7 +57,7 @@ export const StyledCardFigure = styled.figure`
 /**
  * could pick a colour from a colour scheme each time...
  */
-export const StyledLeaderBoard = styled.article`
+export const StyledLeaderBoard = styled.header`
   background-color: var(--color-orange);
   display: flex;
   flex-direction: column;
