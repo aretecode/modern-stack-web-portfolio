@@ -27,6 +27,9 @@ export default gql`
     countryCode: string
     region: string
     profiles: [ProfileType]
+
+    resumeWebsite: string
+    skills: [string]
   }
   type WorkType {
     company: string
@@ -69,6 +72,9 @@ export default gql`
     countryCode: string
     region: string
     profiles: [ProfileInputType]
+
+    resumeWebsite: string
+    skills: [string]
   }
   input WorkInputType {
     company: string
@@ -87,13 +93,12 @@ export default gql`
   }
 
   type Query {
-    resume(id: ID!): ResumeType
-    resumes: [ResumeType]
+    resume(id: ID): ResumeType
   }
   type Mutation {
-    createResume(userId: Int!, input: ResumeInputType!): ResumeType
-    updateResume(id: ID!, input: ResumeInputType!): ResumeType
-    toggleResume(id: ID!): ResumeType
-    deleteResume(id: ID!): String
+    setResume(
+      basics: BasicsInputType
+      work: [WorkInputType]
+    ): AddOrUpdateResumeResponse
   }
 `

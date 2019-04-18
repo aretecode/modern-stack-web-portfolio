@@ -7,16 +7,10 @@ import { Injectable } from '@graphql-modules/di'
 
 @Injectable()
 export class ResumeAPI extends RESTDataSource {
-  baseURL = 'http://localhost:5555/todos'
+  baseURL = 'http://localhost:5555/resumes'
 
   async createResume(id: string) {
     return this.get(`/${id}`)
-  }
-
-  async updateResume(args: {[key: string]: unknown}) {
-    return this.patch(args.id, {
-      ...args,
-    })
   }
 
   async deleteResume(id: string) {

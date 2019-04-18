@@ -2,6 +2,11 @@ export * from './log'
 export * from './server'
 export * from './graphql-modules'
 
-import { startExpress } from './server'
+import { startExpress, createApp } from './server'
 
-startExpress()
+// only run on local development
+if (process.env.IS_NOW === undefined) {
+  startExpress()
+}
+
+export default createApp
