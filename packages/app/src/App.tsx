@@ -1,11 +1,9 @@
 import * as React from 'react'
-import { Helmet } from 'react-helmet'
-import ResumePage from '../pages/ResumePage'
-import AboutPage from '../pages/AboutPage'
 import Footer from './features/Footer'
 import Header from './features/Header'
 import AppWrap from './AppWrap'
 import { ResumeSchema } from './features/ResumeSchema'
+import GoogleDocument from './features/GoogleDocument'
 import { StyledVectorFilter } from './features/VectorFilter'
 import { AppStyles, BelowTheFoldStyles } from './AppStyles'
 /**
@@ -28,15 +26,11 @@ export default class App extends React.PureComponent {
     return (
       <>
         <AppStyles />
+        <GoogleDocument />
         <AppWrap>
-          <Helmet>
-            <title>app</title>
-          </Helmet>
           <Header />
           <ResumeSchema />
           {this.props.children}
-          <ResumePage />
-          <AboutPage />
           <Footer />
           <StyledVectorFilter />
         </AppWrap>

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const StyledNav = styled.nav`
-  width: 100%;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `
 
 export const StyledNavList = styled.ul`

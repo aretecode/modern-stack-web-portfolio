@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Navigation } from '../Navigation'
-import { StyledHeader, StyledLogo } from './styled'
+import { StyledHeader, StyledLogo, StyledLogoLink } from './styled'
 
 export default class Header extends React.PureComponent<{
   className?: string
@@ -8,7 +8,9 @@ export default class Header extends React.PureComponent<{
   render() {
     return (
       <StyledHeader {...this.props}>
-        <StyledLogo>jameswiens</StyledLogo>
+        <StyledLogoLink to="/">
+          <StyledLogo>jameswiens</StyledLogo>
+        </StyledLogoLink>
         <Navigation />
       </StyledHeader>
     )

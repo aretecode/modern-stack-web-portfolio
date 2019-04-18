@@ -17,8 +17,8 @@
     "@babel/runtime": "^7.3.1"
   },
   "devDependencies": {
-    "typescript": "3.4.2",
-    "@types/node": "11.13.0",
+    "typescript": "3.4.3",
+    "@types/node": "11.13.4",
     "prettier": "1.16.4",
     "tslint": "^5.15.0",
     "tslint-react": "4.0.0",

@@ -1,0 +1,33 @@
+# Top-most EditorConfig file
+root = true
+
+[*]
+# Use spaces for indentation
+indent_style = space
+# Each indent should contain 2 spaces
+indent_size = 2
+# Use Unix line endings
+end_of_line = lf
+# The files are utf-8 encoded
+charset = utf-8
+# No whitespace at the end of line
+trim_trailing_whitespace = true
+# A file must end with an empty line - this is good for version control systems
+insert_final_newline = true
+
+# https://github.com/Dreamscapes/makefiles
+[{Makefile,**.mk}]
+# Use tabs for indentation (Makefiles require tabs)
+indent_style = tab
+
+# Set default charset
+[*.{js,css}]
+charset = utf-8
+
+# 2 space indentation
+[*.{md,js,jsx,scss,css,hbs}]
+indent_style = space
+indent_size = 2
+
+# Format Config
+[{package.json,.alexrc,babelrc,.eslintignore,.eslintrc,.markdownlint.json,.proselintrc}]

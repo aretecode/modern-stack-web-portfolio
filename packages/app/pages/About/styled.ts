@@ -130,7 +130,7 @@ export const StyledButton = styled.button`
  */
 export const StyledAboutMeArticle = styled.article`
   background-color: #fff;
-  margin: 4rem 1rem;
+  margin: 9rem 1rem 9rem 1rem;
   display: flex;
   flex-wrap: wrap;
   border-radius: 0.125rem;

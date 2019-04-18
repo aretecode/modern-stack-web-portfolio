@@ -13,6 +13,10 @@ export interface ResumeContextType {
   work: WorkType[]
 }
 
+/**
+ * @todo could replace with `import { defaultApolloStateResume } from '../apolloState'`
+ * (defaultApolloStateResume as any) as ResumeContextType
+ */
 export const EMPTY_RESUME_CONTEXT = Object.freeze({
   basics: EMPTY_OBJ,
   work: EMPTY_ARRAY,

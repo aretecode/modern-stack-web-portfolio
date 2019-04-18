@@ -24,13 +24,12 @@ import {
   StyledFigure,
 } from './styled'
 
-export default class AboutPage extends React.PureComponent {
+export class AboutPage extends React.PureComponent {
   static contextType = ResumeContext
   readonly context: ResumeContextType
 
   render() {
     const {
-      profiles,
       name,
       label = '',
       picture,

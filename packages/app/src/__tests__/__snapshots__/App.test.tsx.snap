@@ -1,8 +1,827 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app should match snapshot 1`] = `
-"<header role=\\"banner\\" class=\\"sc-kGXeez bdNKJi\\"><p id=\\"logo\\" class=\\"sc-kpOJdX kKPUla\\">jameswiens</p><nav class=\\"sc-chPdSV cypMfY\\"><ul class=\\"sc-kgoBCf cfVOvi\\"><li><a rel=\\"me\\" class=\\"sc-bxivhb oQdEG\\" href=\\"/#home\\">home</a></li><li><a rel=\\"me\\" class=\\"sc-bxivhb oQdEG\\" href=\\"/#work\\">work</a></li><li><a rel=\\"me\\" class=\\"sc-bxivhb oQdEG\\" href=\\"/#about\\">about</a></li></ul></nav></header><script type=\\"application/ld+json\\">{\\"@context\\":\\"http://schema.org\\",\\"@graph\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"\\",\\"sameAs\\":[],\\"url\\":\\"\\",\\"email\\":\\"\\",\\"telephone\\":\\"\\",\\"address\\":{\\"@type\\":\\"PostalAddress\\",\\"addressLocality\\":\\"\\",\\"addressRegion\\":\\"\\",\\"postalCode\\":\\"\\",\\"streetAddress\\":\\"\\"}}]}</script><main class=\\"sc-bwzfXH uTxCW\\"><div class=\\"sc-ifAKCX ghgwXw\\"></div></main><article class=\\"sc-cSHVUG jqUQYA\\"><img src=\\"https://user-images.githubusercontent.com/4022631/55691849-01c82e80-59c0-11e9-8c5b-69f64a055b1f.png\\"><figure><img src=\\"\\" alt=\\"about me picture\\" class=\\"sc-jTzLTM etFJhl\\"><figcaption><h3 class=\\"sc-iwsKbI bvnjgk\\"></h3><h4 class=\\"sc-VigVT jdOeRF\\"><i class=\\"sc-gZMcBi inEhTZ\\">↔</i></h4><hr role=\\"separator\\" class=\\"sc-htpNat sc-dnqmqq bREBnM\\"><summary class=\\"sc-gqjmRU juvUbk\\"></summary><nav><section><header>Phone</header><a href=\\"\\" class=\\"sc-bxivhb sc-htoDjs dMypc\\">+</a></section><section><header>Email</header><a href=\\"\\" class=\\"sc-bxivhb sc-htoDjs dMypc\\"></a></section></nav><div class=\\"sc-fjdhpX lgGjvs\\"><button class=\\"sc-jzJRlG jQmSYs\\">Portfolio</button></div></figcaption></figure></article><footer class=\\"sc-kAzzGY jjOMPV\\"><p><span>©2019</span> <span></span></p></footer><svg class=\\"sc-dxgOiQ jowEFf\\"><filter id=\\"green-tint\\" color-interpolation-filters=\\"sRGB\\" x=\\"0\\" y=\\"0\\" height=\\"100%\\" width=\\"100%\\"><feColorMatrix type=\\"matrix\\" values=\\"0.36 0 0 0  0.02
+.c6 {
+  color: var(--color-text-body);
+  background-color: var(--color-dark-background-main);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  background-clip: border-box;
+  border-radius: 0.125rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.c6 figcaption {
+  padding: 1.25rem;
+}
+
+.c6 header {
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.c6 div[role='separator'],
+.c6 time {
+  font-size: 80%;
+  font-weight: 400;
+  color: var(--color-text-unimportant);
+}
+
+.c6 a {
+  color: var(--color-text-unimportant);
+  border-color: var(--color-text-unimportant);
+  border-width: 1px;
+}
+
+.c6 a:link,
+.c6 a:visited {
+  color: var(--color-text-unimportant);
+}
+
+.c6 a::after {
+  display: none;
+}
+
+.c10 {
+  color: var(--color-text-body);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0.5rem;
+}
+
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  color: var(--color-link);
+  padding-bottom: 2px;
+}
+
+.c4:link,
+.c4:visited {
+  color: var(--color-link);
+}
+
+.c4:after {
+  display: block;
+  position: absolute;
+  content: '\\0020';
+  z-index: 2;
+  border-bottom: 3px solid var(--color-link);
+  right: 0;
+  bottom: -3px;
+  left: 0;
+  -webkit-transition: border-bottom-width 0.3s;
+  transition: border-bottom-width 0.3s;
+}
+
+.c4:hover:after {
+  border-bottom-width: 0.5rem;
+}
+
+.c4:focus {
+  outline: thin dotted;
+}
+
+.c4:hover {
+  color: #aaa;
+}
+
+.c4:link {
+  -webkit-tap-highlight-color: rgba(102,102,102,0.5);
+}
+
+.c5 {
+  display: grid;
+  padding: 1rem;
+  grid-gap: 0.5rem;
+  grid-auto-rows: auto;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c8 {
+  max-width: 100%;
+  -webkit-filter: url(#green-tint);
+  filter: url(#green-tint);
+}
+
+.c7 {
+  margin: 0;
+  padding: 0;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: flex-direction 0.24s ease-in-out,width 0.24s ease-in-out;
+  transition: flex-direction 0.24s ease-in-out,width 0.24s ease-in-out;
+}
+
+.c13 {
+  width: 2rem;
+  height: 2rem;
+}
+
+.c23 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  -webkit-letter-spacing: 0.2em;
+  -moz-letter-spacing: 0.2em;
+  -ms-letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
+  color: var(--color-link);
+  padding-bottom: 2px;
+}
+
+.c23:link,
+.c23:visited {
+  color: var(--color-link);
+}
+
+.c23:after {
+  display: block;
+  position: absolute;
+  content: '\\0020';
+  z-index: 2;
+  border-bottom: 3px solid var(--color-link);
+  right: 0;
+  bottom: -3px;
+  left: 0;
+  -webkit-transition: border-bottom-width 0.3s;
+  transition: border-bottom-width 0.3s;
+}
+
+.c23:hover:after {
+  border-bottom-width: 0.5rem;
+}
+
+.c23:focus {
+  outline: thin dotted;
+}
+
+.c23:hover {
+  color: #aaa;
+}
+
+.c23:link {
+  -webkit-tap-highlight-color: rgba(102,102,102,0.5);
+}
+
+.c23.c23.c23 {
+  color: unset;
+  -webkit-text-decoration: initial;
+  text-decoration: initial;
+  -webkit-letter-spacing: initial;
+  -moz-letter-spacing: initial;
+  -ms-letter-spacing: initial;
+  letter-spacing: initial;
+}
+
+.c20 {
+  color: var(--color-text-body);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0.5rem;
+  color: var(--color-text-secondary);
+  border: none;
+  border-top: 5px solid var(--color-text-secondary);
+  margin: 0;
+  padding: 0;
+  height: 0.75rem;
+  width: 8vw;
+}
+
+.c17 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.c19 {
+  font-style: unset;
+  padding-right: 0.15rem;
+  opacity: 0.3;
+}
+
+.c21 {
+  margin-top: 1rem;
+}
+
+.c18 {
+  color: #344955;
+  margin: 0;
+  margin-top: -0.5rem;
+  color: #344955;
+  font-size: 1.2rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  object-fit: cover;
+  border-radius: 0.125rem;
+  box-shadow: none;
+  -webkit-transition: margin-top 0.5s ease-in-out,max-width 0.24s ease-in-out, height 1s ease-in-out,object-position 0.8s ease-in-out, box-shadow 0.24s ease-in-out;
+  transition: margin-top 0.5s ease-in-out,max-width 0.24s ease-in-out, height 1s ease-in-out,object-position 0.8s ease-in-out, box-shadow 0.24s ease-in-out;
+}
+
+.c24 {
+  width: 100%;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: justify-content 500ms ease-in-out;
+  transition: justify-content 500ms ease-in-out;
+}
+
+.c25 {
+  padding: 0.5rem 1.5rem;
+  border-color: unset;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 4px solid #222;
+  color: #222;
+}
+
+.c11 {
+  background-color: #fff;
+  margin: 4rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border-radius: 0.125rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+  height: 500px;
+  width: 80%;
+}
+
+.c11 > img {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-basis: 75px;
+  -ms-flex-preferred-size: 75px;
+  flex-basis: 75px;
+  width: 75px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.c11 address {
+  color: var(--color-text-unimportant);
+}
+
+.c14 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c16 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  word-break: break-word;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+  -webkit-transition: flex-direction 500ms ease-in-out;
+  transition: flex-direction 500ms ease-in-out;
+}
+
+.c22 > section {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.c22 > section > header {
+  font-weight: bold;
+}
+
+.c26 {
+  background-color: var(--color-material-background-purple);
+  padding: 2rem 1.25rem;
+}
+
+.c26 p {
+  color: var(--color-text-body);
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.c3 > li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c3 > li > a {
+  padding: 1rem;
+}
+
+.c0 {
+  background-color: var(--color-material-background-purple);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  padding-left: 1rem;
+  color: var(--color-text-body);
+}
+
+.c27 {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    padding: 0 1rem 0 0;
+  }
+}
+
+@media (max-width:1023px) {
+  .c6 {
+    box-shadow: 0 1rem 0.75rem rgba(0,0,0,0.19), 0 0.5rem 0.5rem rgba(0,0,0,0.23);
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    display: grid;
+    grid-template-columns: calc(50vw - 2rem) calc(50vw - 2rem);
+    grid-gap: 1rem;
+  }
+
+  .c7 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .c7 figcaption {
+    padding: 1.25rem 0;
+  }
+}
+
+@media (max-width:1023px) {
+  .c7 img {
+    max-height: 44vh;
+  }
+}
+
+@media (max-width:1023px) {
+  .c12 {
+    width: 100%;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    border-top: 4px solid;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c17 {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width:1024px) {
+  .c17 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width:1024px) {
+  .c21 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width:1024px) {
+  .c18 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width:500px) {
+  .c15 {
+    object-position: left;
+  }
+}
+
+@media (max-width:1023px) {
+  .c15 {
+    width: 100%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
+    height: 120%;
+    object-position: left;
+    margin-top: -3rem;
+    max-width: 21rem;
+    -webkit-flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width:1023px) {
+  .c24 {
+    -webkit-box-pack: unset;
+    -webkit-justify-content: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    margin: auto;
+  }
+}
+
+@media (max-width:1023px) {
+  .c11 {
+    width: calc(100% - 2rem);
+    height: unset;
+  }
+}
+
+@media (max-width:1023px) {
+  .c14 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:1023px) {
+  .c16 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:1023px) {
+  .c22 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+    role="banner"
+  >
+    <p
+      class="c1"
+      id="logo"
+    >
+      jameswiens
+    </p>
+    <nav
+      class="c2"
+    >
+      <ul
+        class="c3"
+      >
+        <li>
+          <a
+            class="c4"
+            href="/#home"
+            rel="me"
+          >
+            home
+          </a>
+        </li>
+        <li>
+          <a
+            class="c4"
+            href="/#work"
+            rel="me"
+          >
+            work
+          </a>
+        </li>
+        <li>
+          <a
+            class="c4"
+            href="/#about"
+            rel="me"
+          >
+            about
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script
+    type="application/ld+json"
+  >
+    {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"james@jameswiens.com","telephone":"12506509455","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},{"@type":"Organization","name":"Open Source","url":"?company=Open Source","member":{"@type":"OrganizationRole","member":{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"james@jameswiens.com","telephone":"12506509455","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},"startDate":"01/02/2013","endDate":"current","roleName":""}},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Organization","name":"Open Source","url":"?company=Open Source","member":{"@type":"OrganizationRole","member":{"@type":"Person","name":"","sameAs":["https://www.linkedin.com/in/james-wiens/"],"url":"","email":"james@jameswiens.com","telephone":"12506509455","address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""}},"startDate":"01/02/2013","endDate":"current","roleName":""}}}]}]}
+  </script>
+  <main
+    class=""
+  >
+    <div
+      class="c5"
+    >
+      <article
+        class="c6"
+      >
+        <figure
+          class="c7"
+        >
+          <img
+            alt="work picture for Open Source"
+            class="c8"
+            loading="lazy"
+            src="https://user-images.githubusercontent.com/4022631/55686780-04f0f980-5983-11e9-8152-204681b0840f.png"
+          />
+          <figcaption>
+            <header>
+              Open Source
+            </header>
+            <section>
+              <strong />
+              <p />
+              <p />
+              <a
+                class="c4"
+                href="https://github.com/aretecode"
+              >
+                https://github.com/aretecode
+              </a>
+            </section>
+            <section>
+              <time
+                class="c9"
+              >
+                01/02/2013
+              </time>
+              <div
+                class="c10"
+                role="separator"
+              >
+                -
+              </div>
+              <time
+                class="c9"
+              >
+                current
+              </time>
+            </section>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+  </main>
+  <article
+    class="c11"
+  >
+    <aside
+      class="c12"
+    >
+      <a
+        class="c4"
+        href="https://www.linkedin.com/in/james-wiens/"
+        rel="me"
+        title="aretecode"
+      >
+        <svg
+          class="c13"
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="https://www.w3.org/2000/svg"
+        >
+          <title>
+            linkedin
+             icon
+          </title>
+          <path
+            d="M16.893 20.452v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286h-3.555zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+            fill="#000"
+          />
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+        </svg>
+      </a>
+    </aside>
+    <figure
+      class="c14"
+    >
+      <img
+        alt="about me picture"
+        class="c15"
+        src=""
+      />
+      <figcaption
+        class="c16"
+      >
+        <h3
+          class="c17"
+        />
+        <h4
+          class="c18"
+        >
+          
+          <i
+            class="c19"
+          >
+            ↔
+          </i>
+          
+        </h4>
+        <hr
+          class="c20"
+          role="separator"
+        />
+        <p
+          class="c21"
+        />
+        <nav
+          class="c22"
+        >
+          <section>
+            <header>
+              Phone
+            </header>
+            <a
+              class="c23"
+              href="/tel:12506509455"
+            >
+              +
+              12506509455
+            </a>
+          </section>
+          <section>
+            <header>
+              Email
+            </header>
+            <a
+              class="c23"
+              href="/mailto:james@jameswiens.com"
+            >
+              james@jameswiens.com
+            </a>
+          </section>
+        </nav>
+        <div
+          class="c24"
+        >
+          <button
+            class="c25"
+          >
+            Portfolio
+          </button>
+        </div>
+      </figcaption>
+    </figure>
+  </article>
+  <footer
+    class="c26"
+  >
+    <p>
+      <span>
+        ©
+        2019
+      </span>
+       
+      <span />
+    </p>
+  </footer>
+  <svg
+    class="c27"
+  >
+    <filter
+      color-interpolation-filters="sRGB"
+      height="100%"
+      id="green-tint"
+      width="100%"
+      x="0"
+      y="0"
+    >
+      <fecolormatrix
+        type="matrix"
+        values="0.36 0 0 0  0.02
               0.56 0 0 0  0.06
               0.40 0 0 0  0.16
-                0  0 0 1  0\\"></feColorMatrix></filter></svg>"
+                0  0 0 1  0"
+      />
+    </filter>
+  </svg>
+</div>
 `;

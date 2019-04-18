@@ -1,10 +1,13 @@
-// tslint:disable typedef
-// @lint: ^ this is because we have typings, no need to define for each
+/**
+ * @fileOverview this file is for the client side graphql
+ *               it can be used with the `@client` directive
+ * @see https://www.apollographql.com/docs/react/essentials/local-state
+ */
 import { gql } from 'apollo-boost'
 import { withClientState } from 'apollo-link-state'
 import { cache } from './apolloCache'
 import { logger } from './log'
-import { Resolvers, ResumeType } from './typings'
+import { Resolvers, ResumeType, WithTypeNameRecursive } from './typings'
 import { addTypeName } from './utils/addTypeName'
 import ResumeQuery from './graphql/Resume'
 
@@ -59,31 +62,56 @@ export const typeDefs = gql`
   }
 `
 
-export const apolloState = {
-  defaults: {
-    // @todo WithTypeNameStrings<ResumeType>
-    resume: {
-      __typename: 'Resume',
-      basics: {
-        __typename: 'Basics',
-        name: '',
-        label: '',
-        picture: '',
-        email: '',
-        telephone: '',
-        website: '',
-        summary: '',
-        profiles: [],
-        address: '',
-        postalCode: '',
-        city: '',
-        countryCode: '',
-        region: '',
-        resumeWebsite: '',
-        skills: [],
+export const defaultApolloStateResume = {
+  __typename: 'Resume',
+  basics: {
+    __typename: 'Basics',
+    name: '',
+    label: '',
+    picture: '',
+    email: 'james@jameswiens.com',
+    telephone: '12506509455',
+    website: '',
+    summary: '',
+    profiles: [
+      {
+        __typename: 'Profile',
+        network: 'linkedin',
+        username: 'aretecode',
+        url: 'https://www.linkedin.com/in/james-wiens/',
       },
-      work: [],
-    } as any,
+    ],
+    address: '',
+    postalCode: '',
+    city: '',
+    countryCode: '',
+    region: '',
+    resumeWebsite: '',
+    skills: ['skill1'],
+  },
+  work: [
+    {
+      __typename: 'Work',
+      company: 'Open Source',
+      position: '',
+      website: 'https://github.com/aretecode',
+      startDate: '01/02/2013',
+      endDate: 'current',
+      summary: '',
+      highlights: '',
+      picture:
+        'https://user-images.githubusercontent.com/4022631/55686780-04f0f980-5983-11e9-8152-204681b0840f.png',
+    },
+  ],
+}
+
+// tslint:disable typedef
+// @lint: ^ this is because we have typings for resolvers
+//          no need to define for each method
+export const apolloState = {
+  // @todo as WithTypeNameRecursive<ResumeType>
+  defaults: {
+    resume: defaultApolloStateResume,
   },
   resolvers: {
     Query: {
@@ -112,7 +140,7 @@ export const apolloState = {
         info
       ) {
         logger.info('[mutation] setResume')
-        logger.dir(args)
+        logger.info(args)
 
         const updated = {
           __typename: 'Resume',
