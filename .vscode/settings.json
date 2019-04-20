@@ -48,7 +48,8 @@
     "**/dist": true,
     "**/*.json": true,
     "**/*unused/**": true,
-    "**/*snapshots__": true
+    "**/*snapshots__": true,
+    "**/.next": true
   },
   "files.exclude": {
     "packages/*/config": true,
