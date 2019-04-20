@@ -70,8 +70,9 @@ After you running the build, you won't see any data.
 
 To see the content, we need to set it ourselves:
 
-1. open the `http://localhost/4000`
-   ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.05.57%20AM.png?h=300)
+1. open `http://localhost/4000`
+
+![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.05.57%20AM.png?h=300)
 
 2. use the following query
 
@@ -94,4 +95,5 @@ mutation SetResume($basics: BasicsInputType, $work: [WorkInputType]) {
 6. refresh the [_client_](http://localhost/3000)
 
 7. profit???
-   ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.10.32%20AM.png?h=500)
+   
+![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.10.32%20AM.png?h=500)
