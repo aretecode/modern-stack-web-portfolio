@@ -1,14 +1,11 @@
 {
-  "extends": [
-    "tslint-react",
-    "tslint:recommended",
-    "tslint-config-prettier"
-  ],
+  "extends": ["tslint-react", "tslint:recommended", "tslint-config-prettier"],
   "rulesDirectory": [
     "node_modules/tslint-microsoft-contrib",
     "node_modules/tslint-clean-code/dist/src"
   ],
   "rules": {
+    "no-console": false,
     "no-unused-expression": true,
     "no-implicit-dependencies": false,
     "comment-type": [true, "doc", "singleline"],
@@ -17,7 +14,7 @@
 
     "no-flag-args": true,
     "no-commented-out-code": true,
-
+    "only-arrow-functions": false,
     "export-name": false,
     "no-for-each-push": true,
     "no-map-without-usage": true,
@@ -41,7 +38,7 @@
         "private-method-regex": "^[a-z][\\w\\d]+$",
         "protected-method-regex": "^[a-z][\\w\\d]+$",
         "static-method-regex": "^[a-z][\\w\\d]+$",
-        "function-regex": "^[a-z][\\w\\d]+$"
+        "function-regex": "^[a-zA-Z][\\w\\d]+$"
       }
     ],
     "ban": [
@@ -76,19 +73,10 @@
     "no-shadowed-variable": true,
     "no-string-literal": true,
     "no-switch-case-fall-through": true,
-    "one-line": [
-      true,
-      "check-catch",
-      "check-open-brace",
-      "check-whitespace"
-    ],
+    "one-line": [true, "check-catch", "check-open-brace", "check-whitespace"],
     "semicolon": [true, "never"],
     "switch-default": true,
-    "typedef": [
-      true,
-      "parameter",
-      "property-declaration"
-    ],
+    "typedef": [true, "parameter", "property-declaration"],
 
     "adjacent-overload-signatures": false,
 
@@ -99,14 +87,8 @@
     "interface-name": false,
     "member-ordering": false,
 
-
     "object-literal-shorthand": true,
-    "align": [
-      true,
-      "parameters",
-      "arguments",
-      "statements"
-    ],
+    "align": [true, "parameters", "arguments", "statements"],
     "prefer-const": [
       true,
       {
@@ -114,12 +96,9 @@
       }
     ],
     "forin": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
+    "comment-format": [true, "check-space"],
     "eofline": true,
-    "indent": [ true, "spaces", 2],
+    "indent": [true, "spaces", 2],
     "space-within-parens": false,
     "space-before-function-paren": false,
     "one-variable-on": true,
@@ -140,7 +119,7 @@
         "esSpecCompliant": true
       }
     ],
-    "triple-equals": [ true ],
+    "triple-equals": [true],
     "typedef-whitespace": [
       true,
       {
