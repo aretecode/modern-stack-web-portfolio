@@ -1,25 +1,25 @@
-# Modern Stack Resume
+# Modern Stack Portfolio
 
-> [Project issues available here](https://github.com/aretecode/modern-stack-web-resume/projects/1)
+> [Project issues available here](https://github.com/aretecode/modern-stack-web-portfolio/projects/1)
 
 #### Monorepo for
 
-- [modern-stack-resume-graphql](https://github.com/aretecode/modern-stack-resume-graphql)
-- [modern-stack-resume-react](https://github.com/aretecode/modern-stack-resume-react)
+- [modern-stack-portfolio-graphql](https://github.com/aretecode/modern-stack-portfolio-graphql)
+- [modern-stack-portfolio-react](https://github.com/aretecode/modern-stack-portfolio-react)
 
 # Deploy
 
-1. [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/aretecode/modern-stack-resume-graphql) _Graphql_
-2. [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/aretecode/modern-stack-resume-react) _React_
+1. [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/aretecode/modern-stack-portfolio-graphql) _Graphql_
+2. [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/aretecode/modern-stack-portfolio-react) _React_
 
 # Development
 
 ## Cloning
 
-clone the [mono-repo](https://github.com/korfuri/awesome-monorepo) [`modern-stack-web-resume`](https://github.com/aretecode/modern-stack-web-resume)
+clone the [mono-repo](https://github.com/korfuri/awesome-monorepo) [`modern-stack-web-portfolio`](https://github.com/aretecode/modern-stack-web-portfolio)
 
 ```
-git clone --recursive git@github.com:aretecode/modern-stack-web-resume.git
+git clone --recursive git@github.com:aretecode/modern-stack-web-portfolio.git
 ```
 
 ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-19%20at%2011.24.43%20PM.png)
