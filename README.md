@@ -20,11 +20,15 @@ clone the [mono-repo](https://github.com/korfuri/awesome-monorepo) [`modern-stac
 
 ```
 git clone --recursive git@github.com:aretecode/modern-stack-web-portfolio.git
+cd modern-stack-web-portfolio
+git submodule foreach git checkout master
 ```
 
 ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-19%20at%2011.24.43%20PM.png)
 
-> if you are facing with clone, you may not have SSH key configured with your GitHub account, [follow these steps to configure yours in a few seconds](https://www.testingexcellence.com/install-git-mac-generate-ssh-keys/). Once installed, do the cloning step again.
+> if you are facing with clone, you may not have SSH key configured with your GitHub account, [follow these steps to configure yours in a few seconds](https://www.testingexcellence.com/install-git-mac-generate-ssh-keys/). Once installed, do the cloning step again. 
+
+> the submodule checkout master command is because each submodule is pointed to a specific commit, so running this command will point them to master, after which they can be used the same way any other repo is used (_pulling, merging, committing..._)
 
 ## Yarn Install
 
@@ -51,7 +55,7 @@ cd packages/client
 yarn dev
 ```
 
-Then, open `http://localhost/3000`
+Then, open [http://localhost:3000](http://localhost:3000)
 
 #### 2. graphql:
 
@@ -60,7 +64,7 @@ cd packages/graphql
 yarn dev
 ```
 
-Then, open `http://localhost/4000/graphql`
+Then, open [http://localhost:4000/graphql](http://localhost:4000/graphql)
 
 ## Setup the data
 
@@ -70,7 +74,7 @@ After you running the build, you won't see any data.
 
 To see the content, we need to set it ourselves:
 
-1. open `http://localhost/4000`
+1. open [http://localhost:4000/graphql](http://localhost:4000/graphql)
 
 ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.05.57%20AM.png?h=300)
 
@@ -84,11 +88,15 @@ mutation SetResume($basics: BasicsInputType, $work: [WorkInputType]) {
 }
 ```
 
-![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.06.35%20AM.png?h=300)
+  ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.06.35%20AM.png?h=300)
 
-3. open the `Query Variables` ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.06.58%20AM.png&h=300)
+3. open the `Query Variables` 
 
-4. add your JSON to the `Query Variables`. [Example data can be found in this gist](https://gist.github.com/aretecode/7da7359d3cb0e085e81822c1822d3d08) ![https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.07.41%20AM.png]
+![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.06.58%20AM.png?h=300)
+
+4. add your JSON to the `Query Variables`. [Example data can be found in this gist](https://gist.githubusercontent.com/aretecode/7da7359d3cb0e085e81822c1822d3d08/raw/331a29f90f7eb6315ae9c51c0e9df36bd6871fbd/example.json) 
+
+  ![](https://noccumpr-cdn.sirv.com/documentation/Screen%20Shot%202019-04-20%20at%2012.07.41%20AM.png?h=300)
 
 5. click the play/`(>)` button to run it
 
