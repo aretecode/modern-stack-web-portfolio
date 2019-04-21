@@ -1,6 +1,6 @@
 [submodule "packages/client"]
 	path = packages/client
-	url = git@github.com:aretecode/modern-stack-resume-react.git
+	url = git@github.com:aretecode/modern-stack-portfolio-react.git
 [submodule "packages/graphql"]
 	path = packages/graphql
-	url = git@github.com:aretecode/modern-stack-resume-graphql.git
+	url = git@github.com:aretecode/modern-stack-portfolio-graphql.git
