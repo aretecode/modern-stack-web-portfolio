@@ -3,22 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "sideEffects": false,
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],
   "resolutions": {
-    "@babel/core": "7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "webpack": "4.30.0",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.4.3",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/runtime": "^7.3.1"
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.4.4"
   },
   "devDependencies": {
-    "typescript": "3.4.4",
-    "@types/node": "11.13.6",
+    "typescript": "3.4.5",
+    "@types/node": "11.13.8",
     "prettier": "1.17.0",
     "tslint": "^5.16.0",
     "tslint-react": "4.0.0",
@@ -45,5 +47,24 @@
     "eslint-plugin-destructuring": "2.1.0",
     "babel-eslint": "10.0.1",
     "eslint-plugin-babel": "^5.3.0"
-  }
+  },
+  "description": "monorepo portion of the generic portfolio, written in the modern web stack, used on jameswiens.dev site",
+  "homepage": "https://jameswiens.dev",
+  "author": "James Wiens <james@jameswiens.dev> (https://jameswiens.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aretecode/modern-stack-web-portfolio.git"
+  },
+  "keywords": [
+    "jameswiens",
+    "james",
+    "wiens",
+    "dev",
+    "aretecode",
+    "portfolio",
+    "react",
+    "graphql",
+    "typescript",
+    "styled-components"
+  ]
 }
