@@ -2,6 +2,7 @@
 
 - [Project issues](https://github.com/aretecode/modern-stack-web-portfolio/projects/1)
 - [Confluence](https://aretecode.atlassian.net/wiki/spaces/OSWP/overview)
+- [Bitbucket](https://bitbucket.org/aretecodes/modern-stack-web-portfolio/)
 - [JIRA](https://aretecode.atlassian.net/jira/software/projects/OSWPN/boards/1)
 - [Trello](https://trello.com/b/veJvIgaq/modern-stack-web-portfolio)
 
