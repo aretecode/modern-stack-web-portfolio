@@ -1,9 +1,9 @@
 # Modern Stack Portfolio
 
-> [Project issues](https://github.com/aretecode/modern-stack-web-portfolio/projects/1)
-> [Confluence](https://aretecode.atlassian.net/wiki/spaces/OSWP/overview)
-> [JIRA](https://aretecode.atlassian.net/jira/software/projects/OSWPN/boards/1)
-> [Trello](https://trello.com/b/veJvIgaq/modern-stack-web-portfolio)
+- [Project issues](https://github.com/aretecode/modern-stack-web-portfolio/projects/1)
+- [Confluence](https://aretecode.atlassian.net/wiki/spaces/OSWP/overview)
+- [JIRA](https://aretecode.atlassian.net/jira/software/projects/OSWPN/boards/1)
+- [Trello](https://trello.com/b/veJvIgaq/modern-stack-web-portfolio)
 
 #### Monorepo for
 
