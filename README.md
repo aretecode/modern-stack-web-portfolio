@@ -1,5 +1,8 @@
 # Modern Stack Portfolio
 
+
+[![Known Vulnerabilities](https://snyk.io/test/github/aretecode/modern-stack-web-portfolio/badge.svg)](https://snyk.io/test/github/aretecode/modern-stack-web-portfolio)
+
 - [Project issues](https://github.com/aretecode/modern-stack-web-portfolio/projects/1)
 - [Confluence](https://aretecode.atlassian.net/wiki/spaces/OSWP/overview)
 - [Bitbucket](https://bitbucket.org/aretecodes/modern-stack-web-portfolio/)
