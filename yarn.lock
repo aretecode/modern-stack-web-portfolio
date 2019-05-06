@@ -7155,10 +7155,10 @@ grpc-gcp@^0.1.1:
     grpc "^1.16.0"
     protobufjs "^6.8.8"
 
-grpc@1.20.2, grpc@^1.16.0:
-  version "1.20.2"
-  resolved "https://registry.yarnpkg.com/grpc/-/grpc-1.20.2.tgz#be94dcce68f4756170ff19db5faaaa7d0587d2b2"
-  integrity sha512-sJS1Ri8bxwh2F1IUwJ2c2w5SKY6/cleWuheO8gIvlUbJAtUWZEATVF+QCR4fgNnQWnYWPXm7oEeNoxh/93u9cg==
+grpc@1.20.3, grpc@^1.16.0:
+  version "1.20.3"
+  resolved "https://registry.yarnpkg.com/grpc/-/grpc-1.20.3.tgz#a74d36718f1e89c4a64f2fb9441199c3c8f78978"
+  integrity sha512-GsEsi0NVj6usS/xor8pF/xDbDiwZQR59aZl5NUZ59Sy2bdPQFZ3UePr5wevZjHboirRCIQCKRI1cCgvSWUe2ag==
   dependencies:
     lodash.camelcase "^4.3.0"
     lodash.clone "^4.5.0"
